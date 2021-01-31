@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tarot/pages/card.dart';
 import 'package:tarot/pages/menu.dart';
 import 'package:tarot/pages/threeinfo.dart';
 import 'package:tarot/pages/past.dart';
@@ -16,13 +17,13 @@ class TarotApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
-        '/menu': (context) => MenuPage(),
-        '/threeinfo': (context) => ThreeInfoPage(),
-        '/past': (context) => PastPage(),
-        '/present': (context) => PresentPage(),
-        '/future': (context) => FuturePage(),
-        '/threesummary': (context) => ThreeSummaryPage(),
+        '/': (context) => CardPage(),
+        // '/menu': (context) => MenuPage(),
+        // '/threeinfo': (context) => ThreeInfoPage(),
+        // '/past': (context) => PastPage(),
+        // '/present': (context) => PresentPage(),
+        // '/future': (context) => FuturePage(),
+        // '/threesummary': (context) => ThreeSummaryPage(),
       },
       title: 'Tarot',
       theme: ThemeData(
