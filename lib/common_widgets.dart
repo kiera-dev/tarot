@@ -117,6 +117,22 @@ final majorArcana = <String, Map>{
 
 randomKey(Map map) => map.keys.elementAt(new Random().nextInt(map.length));
 
+List<TarotCard> getRandomCards(int numCards) {
+  var indexes = Set();
+  List<TarotCard> randomCards;
+
+  while (indexes.length < numCards) {
+    indexes.add(Random().nextInt(majorArcana.length));
+  }
+
+  for (var i in indexes) {
+    print(majorArcana.entries.elementAt(i));
+    // randomCards.add();
+  }
+
+  return [];
+}
+
 class TarotCard extends StatelessWidget {
   String name;
   String description;
@@ -138,28 +154,27 @@ class TarotCard extends StatelessWidget {
     return Card(
       elevation: 2,
       child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            ListTile(
-              title: Text(this.name),
-              tileColor: Colors.black87,
-              subtitle: Text(
-                this.description,
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        ),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(this.image),
             fit: BoxFit.cover,
           ),
         ),
-        width: 350.0,
-        height: 500.0,
+        height: 300,
+        width: 200,
       ),
     );
   }
 }
+
+BoxDecoration gradientBackground = BoxDecoration(
+  gradient: LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      Colors.deepPurple[700],
+      Colors.pink[400],
+      Colors.amber[400],
+    ],
+  ),
+);

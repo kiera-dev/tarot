@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tarot/pages/card.dart';
-import 'package:tarot/pages/menu.dart';
-import 'package:tarot/pages/threeinfo.dart';
-import 'package:tarot/pages/past.dart';
-import 'package:tarot/pages/present.dart';
-import 'package:tarot/pages/future.dart';
-import 'package:tarot/pages/threesummary.dart';
+import 'package:tarot/pages/landing.dart';
 
 void main() {
   runApp(TarotApp());
@@ -17,20 +11,9 @@ class TarotApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => CardPage(),
-        // '/menu': (context) => MenuPage(),
-        // '/threeinfo': (context) => ThreeInfoPage(),
-        // '/past': (context) => PastPage(),
-        // '/present': (context) => PresentPage(),
-        // '/future': (context) => FuturePage(),
-        // '/threesummary': (context) => ThreeSummaryPage(),
+        '/': (context) => LandingPage(),
       },
       title: 'Tarot',
-      theme: ThemeData(
-        primaryColor: Colors.blueGrey.shade800,
-        accentColor: Colors.blueGrey.shade800,
-        // brightness: Brightness.dark,
-      ),
     );
   }
 }
