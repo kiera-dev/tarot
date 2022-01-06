@@ -1,21 +1,22 @@
 import 'dart:math';
-// import 'package:flutter/material.dart';
 
-void main() {
-  var coolDeck = TarotDeck();
-  coolDeck.deck.forEach((element) {
-    print(
-        '[${element.number}] (${element.arcana}) ${element.name} {reversed: ${element.reversed}}');
-  });
+import 'package:flutter/material.dart';
 
-  print('\n\n');
-  print(coolDeck.deck.length);
-  var cards = coolDeck.draw(3);
-  cards.forEach((element) {
-    print('I drew: ${element.name} <${element.reversed}>');
-  });
-  print(coolDeck.deck.length);
-}
+// void main() {
+//   var coolDeck = TarotDeck();
+//   coolDeck.deck.forEach((element) {
+//     print(
+//         '[${element.number}] (${element.arcana}) ${element.name} {reversed: ${element.reversed}}');
+//   });
+
+//   print('\n\n');
+//   print(coolDeck.deck.length);
+//   var cards = coolDeck.draw(3);
+//   cards.forEach((element) {
+//     print('I drew: ${element.name} <${element.reversed}>');
+//   });
+//   print(coolDeck.deck.length);
+// }
 
 var minorArcana = {
   'Pentacles':
@@ -75,7 +76,7 @@ var majorArcana = {
       "The World lies at the end of The Fool's long and winding journey. Wiser and more world-weary than he started out, the Fool faces a moment of reckoning. Some of us accept where our journey has led us to, while others embark on a new challenge. One thing in this World is certain – you can't have it all.",
 };
 
-class TarotCard {
+class TarotCard extends Card {
   String name;
   int number;
   String description;
@@ -84,6 +85,29 @@ class TarotCard {
 
   TarotCard(this.name, this.description) {
     this.reversed = Random().nextBool();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 2,
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(
+              'images/the_fool.jpg',
+            ),
+          ),
+        ),
+        constraints: BoxConstraints(
+          minHeight: 150,
+          minWidth: 100,
+          maxHeight: 900,
+          maxWidth: 600,
+        ),
+      ),
+    );
   }
 }
 

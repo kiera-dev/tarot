@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tarot/common_widgets.dart';
+import 'package:tarot/widgets/common.dart';
 
 class CardPage extends StatelessWidget {
   var currentCard = TarotCard().getRandom();
