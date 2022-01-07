@@ -2,22 +2,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-// void main() {
-//   var coolDeck = TarotDeck();
-//   coolDeck.deck.forEach((element) {
-//     print(
-//         '[${element.number}] (${element.arcana}) ${element.name} {reversed: ${element.reversed}}');
-//   });
-
-//   print('\n\n');
-//   print(coolDeck.deck.length);
-//   var cards = coolDeck.draw(3);
-//   cards.forEach((element) {
-//     print('I drew: ${element.name} <${element.reversed}>');
-//   });
-//   print(coolDeck.deck.length);
-// }
-
 var minorArcana = {
   'Pentacles':
       'Pentacles are coins and represent earthly circumstances like money, family and health. Historically the Pentacles represent the working class.',
@@ -76,7 +60,7 @@ var majorArcana = {
       "The World lies at the end of The Fool's long and winding journey. Wiser and more world-weary than he started out, the Fool faces a moment of reckoning. Some of us accept where our journey has led us to, while others embark on a new challenge. One thing in this World is certain – you can't have it all.",
 };
 
-class TarotCard extends Card {
+class TarotCard extends StatelessWidget {
   String name;
   int number;
   String description;
@@ -89,25 +73,45 @@ class TarotCard extends Card {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 2,
-      child: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage(
-              'images/the_fool.jpg',
+    if (this.arcana == 'Major') {
+      String imageUrl =
+          'images/' + this.name.toLowerCase().replaceAll(' ', '_') + '.jpg';
+      return AspectRatio(
+        aspectRatio: 2 / 3,
+        child: Card(
+          elevation: 2,
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(imageUrl),
+              ),
             ),
+            height: 300,
+            width: 200,
           ),
         ),
-        constraints: BoxConstraints(
-          minHeight: 150,
-          minWidth: 100,
-          maxHeight: 900,
-          maxWidth: 600,
+      );
+    } else {
+      return AspectRatio(
+        aspectRatio: 2 / 3,
+        child: Card(
+          elevation: 2,
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  'images/the_fool.jpg',
+                ),
+              ),
+            ),
+            height: 300,
+            width: 200,
+          ),
         ),
-      ),
-    );
+      );
+    }
   }
 }
 
