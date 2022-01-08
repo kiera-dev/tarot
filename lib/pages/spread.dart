@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tarot/pages/card.dart';
 import 'package:tarot/pages/landing.dart';
 import 'package:tarot/widgets/common.dart';
 import 'package:tarot/widgets/tarot.dart';
@@ -24,7 +25,7 @@ class SpreadPage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LandingPage()),
+                  MaterialPageRoute(builder: (context) => CardPage()),
                 );
               },
               child: Container(

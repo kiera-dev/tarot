@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tarot/pages/spread.dart';
 import 'package:tarot/widgets/common.dart';
 
@@ -17,19 +18,19 @@ class LandingPage extends StatelessWidget {
                 children: [
                   Text(
                     "Tarot",
-                    style: Theme.of(context).textTheme.headline1,
+                    style: GoogleFonts.sacramento(
+                      fontSize: 72,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 100),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Iiiiiiiiit's tarot time.",
-                    style: Theme.of(context).textTheme.headline3,
+                    style: GoogleFonts.faustina(fontSize: 32),
                   ),
                 ],
               ),
@@ -48,7 +49,7 @@ class LandingPage extends StatelessWidget {
                     },
                     child: Text(
                       "Start",
-                      style: Theme.of(context).textTheme.headline4,
+                      style: GoogleFonts.roboto(),
                     ),
                   ),
                 ],

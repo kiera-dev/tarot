@@ -14,6 +14,7 @@ class TarotApp extends StatelessWidget {
         '/': (context) => LandingPage(),
       },
       title: 'Tarot',
+      darkTheme: ThemeData.dark(),
     );
   }
 }

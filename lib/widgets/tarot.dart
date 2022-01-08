@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 var minorArcana = {
   'Pentacles':
@@ -65,6 +66,7 @@ class TarotCard extends StatelessWidget {
   int number;
   String description;
   String arcana;
+  String suit;
   bool reversed;
 
   TarotCard(this.name, this.description) {
@@ -82,6 +84,7 @@ class TarotCard extends StatelessWidget {
           elevation: 2,
           child: Container(
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(imageUrl),
@@ -93,18 +96,67 @@ class TarotCard extends StatelessWidget {
         ),
       );
     } else {
+      String suitIcon;
+      switch (this.suit) {
+        case 'Swords':
+          {
+            suitIcon = 'images/swords.jpeg';
+          }
+          break;
+        case 'Wands':
+          {
+            suitIcon = 'images/wands.jpeg';
+          }
+          break;
+        case 'Cups':
+          {
+            suitIcon = 'images/cups.jpeg';
+          }
+          break;
+        case 'Pentacles':
+          {
+            suitIcon = 'images/pentacle.jpeg';
+          }
+          break;
+        default:
+      }
       return AspectRatio(
         aspectRatio: 2 / 3,
         child: Card(
           elevation: 2,
           child: Container(
+            padding: EdgeInsets.all(8),
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(
-                  'images/the_fool.jpg',
+                  suitIcon,
                 ),
               ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      this.number.toString(),
+                      style: GoogleFonts.roboto(),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      this.number.toString(),
+                      style: GoogleFonts.roboto(),
+                    ),
+                  ],
+                ),
+              ],
             ),
             height: 300,
             width: 200,
@@ -132,6 +184,7 @@ class TarotDeck {
             TarotCard('$i of ${arcana.key.toString()}', 'Minor arcana card.');
         minorArcanaCard.number = i;
         minorArcanaCard.arcana = 'Minor';
+        minorArcanaCard.suit = arcana.key.toString();
         deck.add(minorArcanaCard);
       }
     });
@@ -145,5 +198,31 @@ class TarotDeck {
       drawnCards.add(deck.removeLast());
     }
     return drawnCards;
+  }
+}
+
+class TarotSpread extends StatelessWidget {
+  String name;
+  TarotDeck deck = TarotDeck();
+
+  TarotSpread(this.name);
+
+  @override
+  Widget build(BuildContext context) {
+    Color widgetColor = Colors.red;
+    switch (this.name) {
+      case 'Elemental':
+        {
+          widgetColor = Colors.blue;
+        }
+        break;
+      default:
+        {}
+        break;
+    }
+
+    return Container(
+      color: widgetColor,
+    );
   }
 }
