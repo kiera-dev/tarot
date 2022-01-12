@@ -35,7 +35,7 @@ class LandingPage extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(bottom: 100),
+                padding: EdgeInsets.only(bottom: 50),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

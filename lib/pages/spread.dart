@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tarot/pages/card.dart';
-import 'package:tarot/pages/landing.dart';
 import 'package:tarot/widgets/common.dart';
 import 'package:tarot/widgets/tarot.dart';
 
@@ -18,6 +17,8 @@ class SpreadPage extends StatelessWidget {
         decoration: gradientBackground,
         child: ListView(
           children: [
+            PerotCard('3 of Pentacles', 'Minor'),
+            PerotCard('The Fool', 'Major'),
             Padding(
               padding: EdgeInsets.only(bottom: 25),
             ),
@@ -25,7 +26,7 @@ class SpreadPage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CardPage()),
+                  MaterialPageRoute(builder: (context) => CardPage('One')),
                 );
               },
               child: Container(
@@ -40,7 +41,7 @@ class SpreadPage extends StatelessWidget {
                     ),
                     Text(
                       "One Card",
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.headline4,
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -54,7 +55,7 @@ class SpreadPage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LandingPage()),
+                  MaterialPageRoute(builder: (context) => CardPage('Three')),
                 );
               },
               child: Container(
@@ -69,7 +70,7 @@ class SpreadPage extends StatelessWidget {
                     ),
                     Text(
                       "Three Cards",
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.headline4,
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -83,7 +84,8 @@ class SpreadPage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LandingPage()),
+                  MaterialPageRoute(
+                      builder: (context) => CardPage('Elemental')),
                 );
               },
               child: Container(
@@ -110,7 +112,7 @@ class SpreadPage extends StatelessWidget {
                     ),
                     Text(
                       "Elemental",
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.headline4,
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -124,7 +126,7 @@ class SpreadPage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LandingPage()),
+                  MaterialPageRoute(builder: (context) => CardPage('Week')),
                 );
               },
               child: Container(
@@ -145,7 +147,7 @@ class SpreadPage extends StatelessWidget {
                     ),
                     Text(
                       "The week ahead",
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.headline4,
                       textAlign: TextAlign.center,
                     ),
                   ],
