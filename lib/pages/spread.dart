@@ -17,8 +17,6 @@ class SpreadPage extends StatelessWidget {
         decoration: gradientBackground,
         child: ListView(
           children: [
-            PerotCard('3 of Pentacles', 'Minor'),
-            PerotCard('The Fool', 'Major'),
             Padding(
               padding: EdgeInsets.only(bottom: 25),
             ),

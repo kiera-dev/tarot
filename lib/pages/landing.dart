@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tarot/pages/spread.dart';
 import 'package:tarot/widgets/common.dart';
+import 'package:tarot/widgets/tarot.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -54,6 +55,10 @@ class LandingPage extends StatelessWidget {
                   ),
                 ],
               ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 20),
+              ),
+              PerotCard(),
             ],
           ),
         ),

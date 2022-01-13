@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -189,7 +190,7 @@ var majorArcanum = <String, Map>{
   'judgement': {
     'description':
         'Judgement is the card of renewal. The angel blowing into the horn heralds resurrection and liberation. This card foretells an important change that will result in healing or fulfillment. It is also a symbol of self-worth.',
-    'image': 'images/the_judgement.jpg',
+    'image': 'images/judgement.jpg',
   },
   'the world': {
     'description':
@@ -251,92 +252,199 @@ class PerotCard extends StatelessWidget {
   String description;
   String arcana;
   String suit;
-  String suit_description;
+  String suitDescription;
   AssetImage image;
   bool reversed;
+  bool flippable;
+  bool hidden;
 
-  PerotCard(this.name, this.arcana) {
+  PerotCard({this.flippable = true, this.hidden = false}) {
+    var arcanaTypes = ['major', 'minor'];
+    this.arcana = arcanaTypes[Random().nextInt(arcanaTypes.length)];
     this.reversed = Random().nextBool();
-    switch (this.arcana.toLowerCase()) {
-      case 'major':
-        {
-          this.description =
-              majorArcanum[this.name.toLowerCase()]['description'];
-          this.image =
-              AssetImage(majorArcanum[this.name.toLowerCase()]['image']);
-        }
-        break;
-      case 'minor':
-        {
-          this.number = int.parse(this.name.characters.first);
-          minorArcanum.entries.forEach((suit) {
-            if (this.name.toLowerCase().contains(suit.key)) {
-              this.suit = suit.key;
-              this.description = suit.value['card_text'][this.number];
-              this.suit_description = suit.value['description'];
-              this.image = AssetImage(suit.value['image']);
-            }
-          });
-        }
-        break;
+
+    if (this.arcana != null && this.number != null) {
+      print('User selected ${this.name} from ${this.arcana} arcana.');
+    } else {
+      switch (this.arcana) {
+        case 'major':
+          {
+            var cardInfo = majorArcanum.entries
+                .elementAt(Random().nextInt(majorArcanum.length));
+            this.name = cardInfo.key;
+            this.description = cardInfo.value['description'];
+            this.image = AssetImage(cardInfo.value['image']);
+          }
+          break;
+        case 'minor':
+          {
+            var cardInfo = minorArcanum.entries
+                .elementAt(Random().nextInt(minorArcanum.length));
+            this.number = Random().nextInt(10);
+            this.name = '${this.number} of ${cardInfo.key}';
+            this.suit = cardInfo.key;
+            this.suitDescription = cardInfo.value['description'];
+            this.description = cardInfo.value['card_text'][this.number];
+            this.image = AssetImage(cardInfo.value['image']);
+          }
+          break;
+      }
     }
   }
 
+  // PerotCard(this.name, this.arcana) {
+  //   this.flippable = true;
+  //   this.reversed = Random().nextBool();
+  //   switch (this.arcana.toLowerCase()) {
+  //     case 'major':
+  //       {
+  //         this.description =
+  //             majorArcanum[this.name.toLowerCase()]['description'];
+  //         this.image =
+  //             AssetImage(majorArcanum[this.name.toLowerCase()]['image']);
+  //       }
+  //       break;
+  //     case 'minor':
+  //       {
+  //         this.number = int.parse(this.name.characters.first);
+  //         minorArcanum.entries.forEach((suit) {
+  //           if (this.name.toLowerCase().contains(suit.key)) {
+  //             this.suit = suit.key;
+  //             this.description = suit.value['card_text'][this.number];
+  //             this.suitDescription = suit.value['description'];
+  //             this.image = AssetImage(suit.value['image']);
+  //           }
+  //         });
+  //       }
+  //       break;
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 2 / 3,
-      child: Card(
-        elevation: 5,
-        child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
+    Widget cardFront = Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: this.image,
+        ),
+      ),
+      height: 300,
+      width: 200,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
             children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.only(left: 30),
-                      height: MediaQuery.of(context).size.height * 0.10,
-                      child: FittedBox(
-                        fit: BoxFit.fitHeight,
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          this.number.toString(),
-                          style: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: MediaQuery.of(context).size.height * 0.20,
-                      color: Colors.black54,
-                      child: Text('Hey'),
-                    ),
-                  )
-                ],
+              Container(
+                height: MediaQuery.of(context).size.height * 0.07,
+                padding: EdgeInsets.all(10),
+                child: FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: Text('1'),
+                ),
               ),
             ],
           ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: this.image,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * 0.03,
+                // padding: EdgeInsets.all(5),
+                child: FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: IconButton(
+                    onPressed: () {
+                      print('Card description');
+                    },
+                    icon: Icon(Icons.info),
+                  ),
+                ),
+              ),
+            ],
           ),
+        ],
+      ),
+    );
+
+    Widget cardBack = Container(
+      height: 300,
+      width: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage('images/back.jpeg'),
         ),
       ),
     );
+
+    return FlipCard(
+      front: cardFront,
+      back: cardBack,
+      flipOnTouch: this.flippable,
+    );
   }
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return AspectRatio(
+  //     aspectRatio: 2 / 3,
+  //     child: Card(
+  //       elevation: 2,
+  //       child: Container(
+  //         height: 300,
+  //         width: 200,
+  //         child: Column(
+  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //           mainAxisSize: MainAxisSize.max,
+  //           children: [
+  //             Row(
+  //               children: [
+  //                 Expanded(
+  //                   child: Container(
+  //                     padding: EdgeInsets.only(left: 30),
+  //                     height: MediaQuery.of(context).size.height * 0.10,
+  //                     child: FittedBox(
+  //                       fit: BoxFit.fitHeight,
+  //                       alignment: Alignment.centerLeft,
+  //                       child: Text(
+  //                         this.number.toString(),
+  //                         style: GoogleFonts.roboto(
+  //                           fontWeight: FontWeight.bold,
+  //                         ),
+  //                       ),
+  //                     ),
+  //                   ),
+  //                 )
+  //               ],
+  //             ),
+  //             Row(
+  //               children: [
+  //                 Expanded(
+  //                   child: Container(
+  //                     height: MediaQuery.of(context).size.height * 0.20,
+  //                     color: Colors.black54,
+  //                     child: Text('Hey'),
+  //                   ),
+  //                 )
+  //               ],
+  //             ),
+  //           ],
+  //         ),
+  //         decoration: BoxDecoration(
+  //           borderRadius: BorderRadius.circular(5),
+  //           image: DecorationImage(
+  //             fit: BoxFit.cover,
+  //             image: this.image,
+  //           ),
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
 }
 
 class TarotCard extends StatelessWidget {
