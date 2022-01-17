@@ -9,7 +9,10 @@ class CardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: TarotSpread(this.spread),
+      body: TarotSpread(
+        name: 'One Card',
+        children: [],
+      ),
     );
   }
 }

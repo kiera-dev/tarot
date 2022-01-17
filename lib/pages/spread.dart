@@ -4,7 +4,7 @@ import 'package:tarot/widgets/common.dart';
 import 'package:tarot/widgets/tarot.dart';
 
 class SpreadPage extends StatelessWidget {
-  var spreadDeck = TarotDeck();
+  var spreadDeck = TarotDeck(flippable: false);
 
   @override
   Widget build(BuildContext context) {
