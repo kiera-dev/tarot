@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:tarot/widgets/tarot.dart';
 
 class CardPage extends StatelessWidget {
-  String spread;
-  CardPage(this.spread);
+  String name;
+  List<int> rows;
+  CardPage(this.name, this.rows);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: TarotSpread(
-        name: 'One Card',
-        children: [],
+      body: Center(
+        child: TarotSpread(
+          name: this.name,
+          rows: this.rows,
+        ),
       ),
     );
   }

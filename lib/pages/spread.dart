@@ -5,6 +5,12 @@ import 'package:tarot/widgets/tarot.dart';
 
 class SpreadPage extends StatelessWidget {
   var spreadDeck = TarotDeck(flippable: false);
+  Map<String, List<int>> spreads = {
+    'One Card': [1],
+    'Three Card': [3],
+    'Elemental': [1, 3, 1],
+    'The Week Ahead': [1, 6],
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -15,147 +21,28 @@ class SpreadPage extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
         decoration: gradientBackground,
-        child: ListView(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(bottom: 25),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CardPage('One')),
-                );
-              },
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.33,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: spreadDeck.draw(1),
-                      ),
-                    ),
-                    Text(
-                      "One Card",
-                      style: Theme.of(context).textTheme.headline4,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 50),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CardPage('Three')),
-                );
-              },
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.33,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: spreadDeck.draw(3),
-                      ),
-                    ),
-                    Text(
-                      "Three Cards",
-                      style: Theme.of(context).textTheme.headline4,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 50),
-            ),
-            GestureDetector(
+        child: ListView.builder(
+          itemCount: this.spreads.length,
+          itemBuilder: (context, index) {
+            var spreadData = this.spreads.entries.elementAt(index);
+            return GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => CardPage('Elemental')),
+                      builder: (context) => CardPage(
+                            spreadData.key,
+                            spreadData.value,
+                          )),
                 );
               },
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.33,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Row(
-                        children: spreadDeck.draw(1),
-                        mainAxisAlignment: MainAxisAlignment.center,
-                      ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: spreadDeck.draw(3),
-                        mainAxisAlignment: MainAxisAlignment.center,
-                      ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: spreadDeck.draw(1),
-                        mainAxisAlignment: MainAxisAlignment.center,
-                      ),
-                    ),
-                    Text(
-                      "Elemental",
-                      style: Theme.of(context).textTheme.headline4,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
+              child: TarotSpread(
+                name: spreadData.key,
+                rows: spreadData.value,
+                flippable: false,
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 50),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CardPage('Week')),
-                );
-              },
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.33,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Row(
-                        children: spreadDeck.draw(1),
-                        mainAxisAlignment: MainAxisAlignment.center,
-                      ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: spreadDeck.draw(6),
-                        mainAxisAlignment: MainAxisAlignment.center,
-                      ),
-                    ),
-                    Text(
-                      "The week ahead",
-                      style: Theme.of(context).textTheme.headline4,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(bottom: 25),
-            ),
-          ],
+            );
+          },
         ),
       ),
     );

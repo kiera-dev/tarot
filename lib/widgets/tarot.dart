@@ -539,6 +539,8 @@ final displayNames = {
   14: 'King',
 };
 
+class TestArcana {}
+
 class TarotCard extends StatelessWidget {
   String name;
   int number;
@@ -713,17 +715,56 @@ class TarotDeck {
 
 class TarotSpread extends StatelessWidget {
   String name;
-  List<Widget> children;
+  List<int> rows;
+  Column spreadWidget;
+  bool flippable;
 
   TarotSpread({
     @required this.name,
-    @required this.children,
-  });
+    @required this.rows,
+    this.flippable = true,
+  }) {
+    var tempDeck = TarotDeck(flippable: this.flippable);
+    spreadWidget = Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(this.name, style: TextStyle(fontSize: 48)),
+      ],
+    );
+    rows.forEach((cardCount) {
+      spreadWidget.children.add(Padding(
+        padding: EdgeInsets.only(bottom: 25),
+      ));
+      spreadWidget.children.add(Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: addPadding(tempDeck.draw(cardCount)),
+      ));
+      spreadWidget.children.add(Padding(
+        padding: EdgeInsets.only(bottom: 25),
+      ));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
+    return FittedBox(
+      fit: BoxFit.contain,
+      child: spreadWidget,
     );
+  }
+
+  List addPadding(List<Widget> unpaddedWidgets, {double padding = 15}) {
+    List<Widget> paddedWidgets = [];
+    paddedWidgets.add(Padding(
+      padding: EdgeInsets.all(padding),
+    ));
+    unpaddedWidgets.forEach((element) {
+      paddedWidgets.add(element);
+      paddedWidgets.add(Padding(
+        padding: EdgeInsets.all(padding),
+      ));
+    });
+    return paddedWidgets;
   }
 }
