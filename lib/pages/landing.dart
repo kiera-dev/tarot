@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tarot/pages/spread.dart';
 import 'package:tarot/widgets/common.dart';
+import 'package:tarot/widgets/tarot.dart';
 
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var testCard = StatefulTarotCard();
+    testCard.flip();
     return Scaffold(
       body: Center(
         child: Container(
@@ -57,6 +60,7 @@ class LandingPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(bottom: 20),
               ),
+              StatefulTarotCard(),
             ],
           ),
         ),

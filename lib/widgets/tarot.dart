@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:basic_utils/basic_utils.dart';
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flip_card/flip_card.dart';
+import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
 
 final tarotArcana = <String, Map>{
@@ -531,6 +532,18 @@ final tarotArcana = <String, Map>{
   },
 };
 
+enum arcanaTypes {
+  major,
+  minor,
+}
+
+enum suits {
+  wands,
+  swords,
+  pentacles,
+  cups,
+}
+
 final displayNames = {
   1: 'Ace',
   11: 'Page',
@@ -539,7 +552,121 @@ final displayNames = {
   14: 'King',
 };
 
-class TestArcana {}
+class _StatefulTarotCardState extends State<StatefulTarotCard> {
+  bool flipped;
+  bool infoExpanded;
+  bool reversed;
+  Color colorState = Colors.blue;
+
+  FlipCardController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = FlipCardController();
+  }
+
+  void flip() {
+    setState(() {
+      _controller.toggleCard();
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    Widget cardFront = Container(
+      color: Colors.white,
+      height: 300,
+      width: 200,
+    );
+
+    Widget cardBack = Container(
+      color: Colors.black,
+      height: 300,
+      width: 200,
+    );
+
+    return FlipCard(
+      front: cardFront,
+      back: cardBack,
+    );
+  }
+}
+
+class StatefulTarotCard extends StatefulWidget {
+  String name;
+  int number;
+  arcanaTypes arcana;
+  suits suit;
+  String uprightDescription;
+  String reversedDescription;
+  String imagePath;
+
+  StatefulTarotCard({
+    this.name,
+    this.number,
+    this.arcana,
+    this.suit,
+    this.uprightDescription,
+    this.reversedDescription,
+    this.imagePath,
+  });
+
+  @override
+  _StatefulTarotCardState createState() => _StatefulTarotCardState();
+}
+
+class TarotCardSchema {
+  String name;
+  int number;
+  arcanaTypes arcana;
+  suits suit;
+  String uprightDescription;
+  String reversedDescription;
+  String imagePath;
+
+  TarotCardSchema({
+    this.name,
+    this.number,
+    this.arcana,
+    this.suit,
+    this.uprightDescription,
+    this.reversedDescription,
+    this.imagePath,
+  });
+}
+
+class TestArcana {
+  TestArcana._();
+
+  static TarotCardSchema theFool = TarotCardSchema(
+    name: 'The Fool',
+    number: 0,
+    arcana: arcanaTypes.major,
+    uprightDescription:
+        'Folly, mania, extravagance, intoxication, delirium, frenzy, bewrayment.',
+    reversedDescription:
+        'Negligence, absence, distribution, carelessness, apathy, nullity, vanity.',
+    imagePath: 'images/the_fool.jpg',
+  );
+
+  static TarotCardSchema theMagician = TarotCardSchema(
+    name: 'The Magician',
+    number: 1,
+    arcana: arcanaTypes.major,
+    uprightDescription:
+        'On the broad level, the Magician is interpreted with energy, potential, and the manifestation of one\'s desires; the card symbolizes the meetings of the physical and spiritual worlds ("as above, so below") and the conduit converting spiritual energy into real-world action.',
+    reversedDescription:
+        'The reversed Magician can also be interpreted as related to black magick and to madness or mental distress.',
+    imagePath: 'images/the_magician.jpg',
+  );
+
+  static TarotCardSchema fourOfPentacles = TarotCardSchema(
+    name: 'Four of Pentacles',
+    number: 4,
+    arcana: arcanaTypes.minor,
+  );
+}
 
 class TarotCard extends StatelessWidget {
   String name;

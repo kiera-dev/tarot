@@ -22,6 +22,10 @@ class SpreadPage extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
         decoration: gradientBackground,
         child: ListView.builder(
+          padding: EdgeInsets.only(
+            bottom: 50,
+            top: 50,
+          ),
           itemCount: this.spreads.length,
           itemBuilder: (context, index) {
             var spreadData = this.spreads.entries.elementAt(index);
@@ -36,10 +40,14 @@ class SpreadPage extends StatelessWidget {
                           )),
                 );
               },
-              child: TarotSpread(
-                name: spreadData.key,
-                rows: spreadData.value,
-                flippable: false,
+              child: Container(
+                padding: EdgeInsets.only(bottom: 50),
+                height: MediaQuery.of(context).size.height * 0.4,
+                child: TarotSpread(
+                  name: spreadData.key,
+                  rows: spreadData.value,
+                  flippable: false,
+                ),
               ),
             );
           },
