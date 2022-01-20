@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:basic_utils/basic_utils.dart';
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flip_card/flip_card.dart';
-import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:motion_toast/motion_toast.dart';
 
 final tarotArcana = <String, Map>{
   'major': {
@@ -532,18 +532,6 @@ final tarotArcana = <String, Map>{
   },
 };
 
-enum arcanaTypes {
-  major,
-  minor,
-}
-
-enum suits {
-  wands,
-  swords,
-  pentacles,
-  cups,
-}
-
 final displayNames = {
   1: 'Ace',
   11: 'Page',
@@ -552,122 +540,7 @@ final displayNames = {
   14: 'King',
 };
 
-class _StatefulTarotCardState extends State<StatefulTarotCard> {
-  bool flipped;
-  bool infoExpanded;
-  bool reversed;
-  Color colorState = Colors.blue;
-
-  FlipCardController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = FlipCardController();
-  }
-
-  void flip() {
-    setState(() {
-      _controller.toggleCard();
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    Widget cardFront = Container(
-      color: Colors.white,
-      height: 300,
-      width: 200,
-    );
-
-    Widget cardBack = Container(
-      color: Colors.black,
-      height: 300,
-      width: 200,
-    );
-
-    return FlipCard(
-      front: cardFront,
-      back: cardBack,
-    );
-  }
-}
-
-class StatefulTarotCard extends StatefulWidget {
-  String name;
-  int number;
-  arcanaTypes arcana;
-  suits suit;
-  String uprightDescription;
-  String reversedDescription;
-  String imagePath;
-
-  StatefulTarotCard({
-    this.name,
-    this.number,
-    this.arcana,
-    this.suit,
-    this.uprightDescription,
-    this.reversedDescription,
-    this.imagePath,
-  });
-
-  @override
-  _StatefulTarotCardState createState() => _StatefulTarotCardState();
-}
-
-class TarotCardSchema {
-  String name;
-  int number;
-  arcanaTypes arcana;
-  suits suit;
-  String uprightDescription;
-  String reversedDescription;
-  String imagePath;
-
-  TarotCardSchema({
-    this.name,
-    this.number,
-    this.arcana,
-    this.suit,
-    this.uprightDescription,
-    this.reversedDescription,
-    this.imagePath,
-  });
-}
-
-class TestArcana {
-  TestArcana._();
-
-  static TarotCardSchema theFool = TarotCardSchema(
-    name: 'The Fool',
-    number: 0,
-    arcana: arcanaTypes.major,
-    uprightDescription:
-        'Folly, mania, extravagance, intoxication, delirium, frenzy, bewrayment.',
-    reversedDescription:
-        'Negligence, absence, distribution, carelessness, apathy, nullity, vanity.',
-    imagePath: 'images/the_fool.jpg',
-  );
-
-  static TarotCardSchema theMagician = TarotCardSchema(
-    name: 'The Magician',
-    number: 1,
-    arcana: arcanaTypes.major,
-    uprightDescription:
-        'On the broad level, the Magician is interpreted with energy, potential, and the manifestation of one\'s desires; the card symbolizes the meetings of the physical and spiritual worlds ("as above, so below") and the conduit converting spiritual energy into real-world action.',
-    reversedDescription:
-        'The reversed Magician can also be interpreted as related to black magick and to madness or mental distress.',
-    imagePath: 'images/the_magician.jpg',
-  );
-
-  static TarotCardSchema fourOfPentacles = TarotCardSchema(
-    name: 'Four of Pentacles',
-    number: 4,
-    arcana: arcanaTypes.minor,
-  );
-}
-
+// TODO(mjcastner): Implement proper StatefulWidget for TarotCard.
 class TarotCard extends StatelessWidget {
   String name;
   int number;
@@ -678,12 +551,14 @@ class TarotCard extends StatelessWidget {
   AssetImage image;
   bool reversed;
   bool flippable;
+  bool startFlipped;
 
   TarotCard(
     this.arcana,
     this.number, {
     this.suit,
     this.flippable = true,
+    this.startFlipped = true,
   }) {
     var cardInfo;
     var arcanaInfo = tarotArcana[this.arcana.toLowerCase()];
@@ -727,6 +602,14 @@ class TarotCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String displayNumber;
+    if (displayNames[this.number] != null &&
+        this.arcana.toLowerCase() == 'minor') {
+      displayNumber = displayNames[this.number].characters.first;
+    } else {
+      displayNumber = this.number.toString();
+    }
+
     Widget cardFront = Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
@@ -741,6 +624,7 @@ class TarotCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 height: MediaQuery.of(context).size.height * 0.07,
@@ -751,12 +635,20 @@ class TarotCard extends StatelessWidget {
                     strokeWidth: 1,
                     strokeColor: Colors.black,
                     child: Text(
-                      this.number.toString(),
+                      displayNumber,
                       style: TextStyle(
                         color: Colors.white,
                       ),
                     ),
                   ),
+                ),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.05,
+                padding: EdgeInsets.all(10),
+                child: FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: this.reversed ? Icon(Icons.refresh) : null,
                 ),
               ),
             ],
@@ -771,6 +663,8 @@ class TarotCard extends StatelessWidget {
                   child: IconButton(
                     onPressed: () {
                       print('${this.name} - ${this.description}');
+                      MotionToast.info(description: Text(this.description))
+                          .show(context);
                     },
                     icon: Icon(Icons.info),
                   ),
@@ -794,19 +688,31 @@ class TarotCard extends StatelessWidget {
       ),
     );
 
-    return FlipCard(
-      front: cardFront,
-      back: cardBack,
-      flipOnTouch: this.flippable,
-    );
+    if (this.startFlipped) {
+      return FlipCard(
+        front: cardBack,
+        back: cardFront,
+        flipOnTouch: this.flippable,
+      );
+    } else {
+      return FlipCard(
+        front: cardFront,
+        back: cardBack,
+        flipOnTouch: this.flippable,
+      );
+    }
   }
 }
 
 class TarotDeck {
   List<TarotCard> deck = [];
   bool flippable;
+  bool startFlipped;
 
-  TarotDeck({this.flippable = true}) {
+  TarotDeck({
+    this.flippable = true,
+    this.startFlipped = true,
+  }) {
     var minorArcana = [for (var i = 1; i <= 14; i++) i];
     tarotArcana['minor'].keys.forEach((suit) {
       minorArcana.forEach((element) {
@@ -815,6 +721,7 @@ class TarotDeck {
           element,
           suit: suit,
           flippable: this.flippable,
+          startFlipped: this.startFlipped,
         ));
       });
     });
@@ -825,6 +732,7 @@ class TarotDeck {
         'major',
         element,
         flippable: this.flippable,
+        startFlipped: this.startFlipped,
       ));
     });
 
@@ -845,13 +753,18 @@ class TarotSpread extends StatelessWidget {
   List<int> rows;
   Column spreadWidget;
   bool flippable;
+  bool startFlipped;
 
   TarotSpread({
     @required this.name,
     @required this.rows,
     this.flippable = true,
+    this.startFlipped = true,
   }) {
-    var tempDeck = TarotDeck(flippable: this.flippable);
+    var tempDeck = TarotDeck(
+      flippable: this.flippable,
+      startFlipped: this.startFlipped,
+    );
     spreadWidget = Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.center,

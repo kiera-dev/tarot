@@ -7,8 +7,6 @@ import 'package:tarot/widgets/tarot.dart';
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var testCard = StatefulTarotCard();
-    testCard.flip();
     return Scaffold(
       body: Center(
         child: Container(
@@ -60,7 +58,6 @@ class LandingPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(bottom: 20),
               ),
-              StatefulTarotCard(),
             ],
           ),
         ),

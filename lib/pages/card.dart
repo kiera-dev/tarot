@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tarot/widgets/tarot.dart';
+import 'package:tarot/widgets/common.dart';
 
 class CardPage extends StatelessWidget {
   String name;
@@ -10,10 +11,13 @@ class CardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: TarotSpread(
-          name: this.name,
-          rows: this.rows,
+      body: Container(
+        decoration: gradientBackground,
+        child: Center(
+          child: TarotSpread(
+            name: this.name,
+            rows: this.rows,
+          ),
         ),
       ),
     );

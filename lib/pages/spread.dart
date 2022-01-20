@@ -47,6 +47,7 @@ class SpreadPage extends StatelessWidget {
                   name: spreadData.key,
                   rows: spreadData.value,
                   flippable: false,
+                  startFlipped: false,
                 ),
               ),
             );
