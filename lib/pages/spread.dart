@@ -9,7 +9,7 @@ class SpreadPage extends StatelessWidget {
     'One Card': [1],
     'Three Card': [3],
     'Elemental': [1, 3, 1],
-    'The Week Ahead': [1, 6],
+    'The Week Ahead': [1, 3, 3],
   };
 
   @override
@@ -29,27 +29,36 @@ class SpreadPage extends StatelessWidget {
           itemCount: this.spreads.length,
           itemBuilder: (context, index) {
             var spreadData = this.spreads.entries.elementAt(index);
-            return GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => CardPage(
-                            spreadData.key,
-                            spreadData.value,
-                          )),
-                );
-              },
-              child: Container(
-                padding: EdgeInsets.only(bottom: 50),
-                height: MediaQuery.of(context).size.height * 0.4,
-                child: TarotSpread(
-                  name: spreadData.key,
-                  rows: spreadData.value,
-                  flippable: false,
-                  startFlipped: false,
+            return Column(
+              children: [
+                Text(
+                  spreadData.key,
+                  style: TextStyle(fontSize: 35),
                 ),
-              ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CardPage(
+                          spreadData.key,
+                          spreadData.value,
+                        ),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.only(bottom: 50),
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    child: TarotSpread(
+                      name: spreadData.key,
+                      rows: spreadData.value,
+                      flippable: false,
+                      startFlipped: false,
+                    ),
+                  ),
+                )
+              ],
             );
           },
         ),

@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tarot/pages/spread.dart';
 import 'package:tarot/widgets/common.dart';
-import 'package:tarot/widgets/tarot.dart';
 
-class LandingPage extends StatelessWidget {
+class TitlePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

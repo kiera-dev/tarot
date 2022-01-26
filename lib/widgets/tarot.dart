@@ -6,6 +6,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_toast/motion_toast.dart';
 
+// TODO(mjcastner): Clean this data structure up, if possible.
 final tarotArcana = <String, Map>{
   'major': {
     'the fool': {
@@ -602,6 +603,7 @@ class TarotCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Find the single character descriptor per card (e.g. 9, 10, K, Q).
     String displayNumber;
     if (displayNames[this.number] != null &&
         this.arcana.toLowerCase() == 'minor') {
@@ -768,9 +770,7 @@ class TarotSpread extends StatelessWidget {
     spreadWidget = Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(this.name, style: TextStyle(fontSize: 48)),
-      ],
+      children: [],
     );
     rows.forEach((cardCount) {
       spreadWidget.children.add(Padding(

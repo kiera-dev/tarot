@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tarot/widgets/tarot.dart';
 import 'package:tarot/widgets/common.dart';
+import 'package:tarot/widgets/tarot.dart';
 
 class CardPage extends StatelessWidget {
   String name;
