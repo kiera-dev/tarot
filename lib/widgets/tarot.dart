@@ -6,7 +6,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:motion_toast/motion_toast.dart';
 
-// TODO(mjcastner): Clean this data structure up, if possible.
+// TODO(mjcastner): Clean this data structure up.
 final tarotArcana = <String, Map>{
   'major': {
     'the fool': {

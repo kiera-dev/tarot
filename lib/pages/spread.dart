@@ -3,6 +3,47 @@ import 'package:tarot/pages/card.dart';
 import 'package:tarot/widgets/common.dart';
 import 'package:tarot/widgets/tarot.dart';
 
+class SpreadInkWell extends StatefulWidget {
+  TarotSpread spread;
+  SpreadInkWell({@required this.spread});
+
+  @override
+  _SpreadInkWellState createState() => _SpreadInkWellState();
+}
+
+class _SpreadInkWellState extends State<SpreadInkWell> {
+  bool isHovering = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: AnimatedContainer(
+        curve: Curves.linear,
+        duration: const Duration(milliseconds: 300),
+        decoration: BoxDecoration(
+          color: isHovering ? Colors.black45 : Colors.transparent,
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: this.widget.spread,
+      ),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CardPage(
+              this.widget.spread.name,
+              this.widget.spread.rows,
+            ),
+          ),
+        );
+      },
+      onHover: (hoverValue) {
+        setState(() => isHovering = hoverValue);
+      },
+    );
+  }
+}
+
 class SpreadPage extends StatelessWidget {
   var spreadDeck = TarotDeck(flippable: false);
   Map<String, List<int>> spreads = {
@@ -15,9 +56,6 @@ class SpreadPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Choose spread"),
-      ),
       body: Container(
         padding: EdgeInsets.fromLTRB(25, 0, 25, 0),
         decoration: gradientBackground,
@@ -35,29 +73,14 @@ class SpreadPage extends StatelessWidget {
                   spreadData.key,
                   style: TextStyle(fontSize: 35),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CardPage(
-                          spreadData.key,
-                          spreadData.value,
-                        ),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    padding: EdgeInsets.only(bottom: 50),
-                    height: MediaQuery.of(context).size.height * 0.4,
-                    child: TarotSpread(
-                      name: spreadData.key,
-                      rows: spreadData.value,
-                      flippable: false,
-                      startFlipped: false,
-                    ),
+                SpreadInkWell(
+                  spread: TarotSpread(
+                    name: spreadData.key,
+                    rows: spreadData.value,
+                    flippable: false,
+                    startFlipped: false,
                   ),
-                )
+                ),
               ],
             );
           },
