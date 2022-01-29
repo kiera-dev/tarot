@@ -81,6 +81,7 @@ class SpreadPage extends StatelessWidget {
                     heroEnabled: false,
                   ),
                 ),
+                Padding(padding: EdgeInsets.only(bottom: 50)),
               ],
             );
           },
