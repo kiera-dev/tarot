@@ -78,6 +78,7 @@ class SpreadPage extends StatelessWidget {
                     rows: spreadData.value,
                     flippable: false,
                     startFlipped: false,
+                    heroEnabled: false,
                   ),
                 ),
               ],
