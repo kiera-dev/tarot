@@ -45,7 +45,6 @@ class _SpreadInkWellState extends State<SpreadInkWell> {
 }
 
 class SpreadPage extends StatelessWidget {
-  var spreadDeck = TarotDeck(flippable: false);
   Map<String, List<int>> spreads = {
     'One Card': [1],
     'Three Card': [3],
