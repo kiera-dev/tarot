@@ -17,6 +17,7 @@ class CardDetailPage extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
         padding: EdgeInsets.all(25),
+        width: MediaQuery.of(context).size.width,
         decoration: gradientBackground,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
