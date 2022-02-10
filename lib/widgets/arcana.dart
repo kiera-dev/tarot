@@ -33,8 +33,6 @@ class CardInfo {
 }
 
 class TarotArcana {
-  // Prevent instantiation / updates
-  // TarotArcana._();
   TarotArcana();
 
   List<CardInfo> getAll() {
