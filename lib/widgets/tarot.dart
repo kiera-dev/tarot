@@ -74,7 +74,7 @@ class TarotCard extends StatefulWidget {
 }
 
 class _TarotCardState extends State<TarotCard> {
-  bool isHovering = false;
+  bool isFlipped = false;
 
   Widget buildCardBack(BuildContext context) {
     return Container(
@@ -206,6 +206,11 @@ class _TarotCardState extends State<TarotCard> {
 
   @override
   Widget build(BuildContext context) {
+    // setState(() {
+    //   setState(() {
+    //     this.isFlipped = true;
+    //   });
+    // });
     if (this.widget.reversed) {
       return RotationTransition(
         turns: new AlwaysStoppedAnimation(180 / 360),

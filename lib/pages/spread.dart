@@ -51,6 +51,11 @@ class SpreadPage extends StatelessWidget {
     'Elemental': [1, 3, 1],
     'The Week Ahead': [1, 3, 3],
   };
+  var spreadPageDeck = TarotDeck(
+    flippable: false,
+    startFlipped: false,
+    heroEnabled: false,
+  );
 
   @override
   Widget build(BuildContext context) {

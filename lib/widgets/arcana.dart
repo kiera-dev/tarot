@@ -17,6 +17,7 @@ class CardInfo {
   final Arcana arcana;
   final int number;
   final Suits suit;
+  // TODO(mjcastner): Consolidate description into a single, conditional field
   final String uprightDescription;
   final String reverseDescription;
   final AssetImage image;
