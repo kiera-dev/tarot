@@ -11,3 +11,10 @@ BoxDecoration gradientBackground = BoxDecoration(
     ],
   ),
 );
+
+BoxDecoration artDecoBackground = BoxDecoration(
+  image: DecorationImage(
+    image: AssetImage("images/art_deco.jpg"),
+    fit: BoxFit.cover,
+  ),
+);
