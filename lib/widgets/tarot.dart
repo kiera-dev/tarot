@@ -6,36 +6,71 @@ import 'package:flutter/material.dart';
 import 'package:tarot/pages/card_detail.dart';
 import 'package:tarot/widgets/arcana.dart';
 
-class TarotDeck {
-  List<TarotCard> deck = [];
-  bool flippable;
-  bool startFlipped;
-  bool heroEnabled;
+Map<String, List<int>> spreads = {
+  'One Card': [1],
+  'Three Card': [3],
+  'Elemental': [1, 3, 1],
+  'The Week Ahead': [1, 3, 3],
+};
 
-  TarotDeck({
-    this.flippable = true,
-    this.startFlipped = true,
-    this.heroEnabled = true,
-  }) {
-    TarotArcana arcanaList = TarotArcana();
-    arcanaList.getAll().forEach((arcanaType) {
-      this.deck.add(TarotCard(
-            type: arcanaType,
-            flippable: this.flippable,
-            startFlipped: this.startFlipped,
-            heroEnabled: this.heroEnabled,
-          ));
-    });
-    this.deck.shuffle();
+String getDisplayNum(int cardNum) {
+  const displayNames = {
+    1: 'A',
+    11: 'P',
+    12: 'Kn',
+    13: 'Q',
+    14: 'K',
+  };
+  if (displayNames[cardNum] != null) {
+    return displayNames[cardNum];
+  } else {
+    return cardNum.toString();
   }
+}
 
-  List<TarotCard> draw({numCards = 1}) {
-    List<TarotCard> drawnCards = [];
-    for (int i = 1; i <= numCards; i++) {
-      drawnCards.add(deck.removeLast());
-    }
-    return drawnCards;
-  }
+Widget constructCardLayout(CardInfo card) {
+  return Container(
+    child: Column(
+      children: [
+        Padding(padding: EdgeInsets.only(top: 10)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(padding: EdgeInsets.only(left: 10)),
+            BorderedText(
+              child: Text(
+                getDisplayNum(card.number),
+                style: TextStyle(fontSize: 25),
+              ),
+            ),
+          ],
+        ),
+        Expanded(
+          child: Container(),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            BorderedText(
+              child: Text(
+                card.name,
+              ),
+            ),
+          ],
+        ),
+        Padding(padding: EdgeInsets.only(bottom: 5)),
+      ],
+    ),
+    height: 300,
+    width: 200,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(5),
+      image: DecorationImage(
+        image: card.image,
+        fit: BoxFit.cover,
+      ),
+    ),
+  );
 }
 
 class TarotCard extends StatefulWidget {
@@ -47,15 +82,9 @@ class TarotCard extends StatefulWidget {
   String description;
   AssetImage image;
   bool reversed;
-  bool flippable;
-  bool startFlipped;
-  bool heroEnabled;
 
   TarotCard({
     @required this.type,
-    this.flippable = true,
-    this.startFlipped = true,
-    this.heroEnabled = true,
   }) {
     this.name = this.type.name;
     this.arcana = this.type.arcana;
@@ -74,7 +103,20 @@ class TarotCard extends StatefulWidget {
 }
 
 class _TarotCardState extends State<TarotCard> {
-  bool isFlipped = false;
+  Widget buildCardFront(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CardDetailPage(this.widget)),
+        );
+      },
+      child: Hero(
+        tag: this.widget.name,
+        child: constructCardLayout(this.widget.type),
+      ),
+    );
+  }
 
   Widget buildCardBack(BuildContext context) {
     return Container(
@@ -90,212 +132,20 @@ class _TarotCardState extends State<TarotCard> {
     );
   }
 
-  Widget buildCardFront(BuildContext context) {
-    if (this.widget.heroEnabled) {
-      return GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => CardDetailPage(this.widget)),
-          );
-        },
-        child: Container(
-          child: Column(
-            children: [
-              Padding(padding: EdgeInsets.only(top: 10)),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(padding: EdgeInsets.only(left: 10)),
-                  BorderedText(
-                    child: Text(
-                      getDisplayNum(this.widget.number),
-                      style: TextStyle(fontSize: 25),
-                    ),
-                  ),
-                ],
-              ),
-              Expanded(
-                child: Container(),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  BorderedText(
-                    child: Text(
-                      this.widget.name,
-                    ),
-                  ),
-                ],
-              ),
-              Padding(padding: EdgeInsets.only(bottom: 5)),
-            ],
-          ),
-          height: 300,
-          width: 200,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            image: DecorationImage(
-              image: this.widget.image,
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-      );
-    } else {
-      return Container(
-        child: Column(
-          children: [
-            Padding(padding: EdgeInsets.only(top: 10)),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Padding(padding: EdgeInsets.only(left: 10)),
-                BorderedText(
-                  child: Text(
-                    getDisplayNum(this.widget.number),
-                    style: TextStyle(fontSize: 25),
-                  ),
-                ),
-              ],
-            ),
-            Expanded(
-              child: Container(),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                BorderedText(
-                  child: Text(
-                    this.widget.name,
-                  ),
-                ),
-              ],
-            ),
-            Padding(padding: EdgeInsets.only(bottom: 5)),
-          ],
-        ),
-        height: 300,
-        width: 200,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          image: DecorationImage(
-            image: this.widget.image,
-            fit: BoxFit.cover,
-          ),
-        ),
-      );
-    }
-  }
-
-  String getDisplayNum(int cardNum) {
-    const displayNames = {
-      1: 'A',
-      11: 'P',
-      12: 'Kn',
-      13: 'Q',
-      14: 'K',
-    };
-    if (displayNames[cardNum] != null) {
-      return displayNames[cardNum];
-    } else {
-      return cardNum.toString();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    // setState(() {
-    //   setState(() {
-    //     this.isFlipped = true;
-    //   });
-    // });
+    Widget tarotCardWidget = FlipCard(
+      // Reverse these so card starts flipped
+      front: buildCardBack(context),
+      back: buildCardFront(context),
+    );
     if (this.widget.reversed) {
       return RotationTransition(
         turns: new AlwaysStoppedAnimation(180 / 360),
-        child: FlipCard(
-          flipOnTouch: this.widget.flippable,
-          front: this.widget.startFlipped
-              ? buildCardBack(context)
-              : buildCardFront(context),
-          back: this.widget.startFlipped
-              ? buildCardFront(context)
-              : buildCardBack(context),
-        ),
+        child: tarotCardWidget,
       );
     } else {
-      return FlipCard(
-        flipOnTouch: this.widget.flippable,
-        front: this.widget.startFlipped
-            ? buildCardBack(context)
-            : buildCardFront(context),
-        back: this.widget.startFlipped
-            ? buildCardFront(context)
-            : buildCardBack(context),
-      );
+      return tarotCardWidget;
     }
-  }
-}
-
-class TarotSpread extends StatelessWidget {
-  final String name;
-  final List<int> rows;
-  Column spreadWidget;
-  final bool flippable;
-  final bool startFlipped;
-  bool heroEnabled;
-
-  TarotSpread({
-    @required this.name,
-    @required this.rows,
-    this.flippable = true,
-    this.startFlipped = true,
-    this.heroEnabled = true,
-  }) {
-    var tempDeck = TarotDeck(
-      flippable: this.flippable,
-      startFlipped: this.startFlipped,
-      heroEnabled: this.heroEnabled,
-    );
-    spreadWidget = Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [],
-    );
-    rows.forEach((cardCount) {
-      spreadWidget.children.add(Padding(
-        padding: EdgeInsets.only(bottom: 25),
-      ));
-      spreadWidget.children.add(Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: addPadding(tempDeck.draw(numCards: cardCount)),
-      ));
-      spreadWidget.children.add(Padding(
-        padding: EdgeInsets.only(bottom: 25),
-      ));
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return FittedBox(
-      fit: BoxFit.contain,
-      child: spreadWidget,
-    );
-  }
-
-  List addPadding(List<Widget> unpaddedWidgets, {double padding = 15}) {
-    List<Widget> paddedWidgets = [];
-    paddedWidgets.add(Padding(
-      padding: EdgeInsets.all(padding),
-    ));
-    unpaddedWidgets.forEach((element) {
-      paddedWidgets.add(element);
-      paddedWidgets.add(Padding(
-        padding: EdgeInsets.all(padding),
-      ));
-    });
-    return paddedWidgets;
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tarot/widgets/arcana.dart';
 import 'package:tarot/widgets/common.dart';
-import 'package:tarot/widgets/tarot2.dart';
+import 'package:tarot/widgets/tarot.dart';
 
 class TablePage extends StatelessWidget {
   final String name;
