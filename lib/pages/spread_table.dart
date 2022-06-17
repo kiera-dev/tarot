@@ -15,21 +15,25 @@ class TablePage extends StatelessWidget {
     List<CardInfo> deck = TarotArcana().getAll();
     deck.shuffle();
 
-    Column tarotSpread = Column(
-      children: [],
-      mainAxisAlignment: MainAxisAlignment.center,
-    );
-
-    this.rows.forEach(((cardCount) {
-      Row cardRow = Row(
+    Column buildSpread() {
+      Column tarotSpread = Column(
         children: [],
         mainAxisAlignment: MainAxisAlignment.spaceAround,
       );
-      for (var i = 0; i < cardCount; i++) {
-        cardRow.children.add(TarotCard(type: deck.removeLast()));
-      }
-      tarotSpread.children.add(cardRow);
-    }));
+
+      this.rows.forEach(((cardCount) {
+        Row cardRow = Row(
+          children: [],
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+        );
+        for (var i = 0; i < cardCount; i++) {
+          cardRow.children.add(TarotCard(type: deck.removeLast()));
+        }
+        tarotSpread.children.add(cardRow);
+      }));
+
+      return tarotSpread;
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -40,7 +44,17 @@ class TablePage extends StatelessWidget {
       ),
       body: Container(
         decoration: artDecoBackground,
-        child: tarotSpread,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: FittedBox(
+          alignment: Alignment.center,
+          fit: BoxFit.contain,
+          child: Container(
+            height: 1000,
+            width: 800,
+            child: buildSpread(),
+          ),
+        ),
       ),
     );
   }
