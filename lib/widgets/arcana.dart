@@ -36,6 +36,33 @@ class CardInfo {
 class TarotArcana {
   TarotArcana();
 
+  List<CardInfo> getMajorArcana() {
+    return [
+      theFool,
+      theMagician,
+      theHighPriestess,
+      theEmpress,
+      theEmperor,
+      theHierophant,
+      theLovers,
+      theChariot,
+      strength,
+      theHermit,
+      wheelOfFortune,
+      justice,
+      theHangedMan,
+      death,
+      temperance,
+      theDevil,
+      theTower,
+      theStar,
+      theMoon,
+      theSun,
+      judgement,
+      theWorld,
+    ];
+  }
+
   List<CardInfo> getAll() {
     return [
       theFool,

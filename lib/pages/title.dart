@@ -1,6 +1,7 @@
+import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tarot/pages/spread.dart';
+import 'package:tarot/pages/spread_choice.dart';
 import 'package:tarot/widgets/common.dart';
 
 class TitlePage extends StatelessWidget {
@@ -9,33 +10,23 @@ class TitlePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration: gradientBackground,
+          decoration: artDecoBackground,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Tarot",
-                    style: GoogleFonts.sacramento(
-                      fontSize: 72,
-                      fontWeight: FontWeight.bold,
+                  BorderedText(
+                    child: Text(
+                      "Tarot",
+                      style: GoogleFonts.sacramento(
+                        fontSize: 72,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Iiiiiiiiit's tarot time.",
-                    style: GoogleFonts.faustina(fontSize: 32),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 50),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
