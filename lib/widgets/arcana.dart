@@ -154,7 +154,7 @@ class TarotArcana {
         'Folly, mania, extravagance, intoxication, delirium, frenzy, bewrayment.',
     reverseDescription:
         'Negligence, absence, distribution, carelessness, apathy, nullity, vanity.',
-    image: AssetImage('images/major/the_fool.png'),
+    image: AssetImage('assets/images/major/the_fool.png'),
   );
 
   static final theMagician = CardInfo(
@@ -165,7 +165,7 @@ class TarotArcana {
         'On the broad level, the Magician is interpreted with energy, potential, and the manifestation of one\'s desires; the card symbolizes the meetings of the physical and spiritual worlds ("as above, so below") and the conduit converting spiritual energy into real-world action.',
     reverseDescription:
         'The reversed Magician can also be interpreted as related to black magick and to madness or mental distress.',
-    image: AssetImage('images/major/the_magician.png'),
+    image: AssetImage('assets/images/major/the_magician.png'),
   );
 
   static final theHighPriestess = CardInfo(
@@ -176,7 +176,7 @@ class TarotArcana {
         'Secrets, mystery, the future as yet unrevealed; the woman who interests the Querent, if male; the Querent herself, if female; silence, tenacity; mystery, wisdom, science.',
     reverseDescription:
         'Reversed: Passion, moral or physical ardor, conceit, surface knowledge.',
-    image: AssetImage('images/major/the_high_priestess.png'),
+    image: AssetImage('assets/images/major/the_high_priestess.png'),
   );
 
   static final theEmpress = CardInfo(
@@ -187,7 +187,7 @@ class TarotArcana {
         'Fruitfulness, action, initiative, length of days; the unknown, clandestine; also difficulty, doubt, ignorance.',
     reverseDescription:
         'Light, truth, the unraveling of involved matters, public rejoicings; according to another reading, vacillation.',
-    image: AssetImage('images/major/the_empress.png'),
+    image: AssetImage('assets/images/major/the_empress.png'),
   );
 
   static final theEmperor = CardInfo(
@@ -198,7 +198,7 @@ class TarotArcana {
         'Stability, power, protection, realization; a great person; aid, reason, conviction also authority and will.',
     reverseDescription:
         'Benevolence, compassion, credit; also confusion to enemies, obstruction, immaturity.',
-    image: AssetImage('images/major/the_emperor.png'),
+    image: AssetImage('assets/images/major/the_emperor.png'),
   );
 
   static final theHierophant = CardInfo(
@@ -209,7 +209,7 @@ class TarotArcana {
         'Marriage, alliance, captivity, servitude; by another account, mercy, and goodness; inspiration; the man to whom the Querent has recourse.',
     reverseDescription:
         'Society, good understanding, concord, over kindness, weakness.',
-    image: AssetImage('images/major/the_hierophant.png'),
+    image: AssetImage('assets/images/major/the_hierophant.png'),
   );
 
   static final theLovers = CardInfo(
@@ -219,7 +219,7 @@ class TarotArcana {
     uprightDescription: 'Attraction, love, beauty, trials overcome.',
     reverseDescription:
         'Failure, foolish designs. Another account speaks of marriage frustrated and contrarieties of all kinds.',
-    image: AssetImage('images/major/the_lovers.png'),
+    image: AssetImage('assets/images/major/the_lovers.png'),
   );
 
   static final theChariot = CardInfo(
@@ -229,7 +229,7 @@ class TarotArcana {
     uprightDescription:
         'Succour, providence; also war, triumph, presumption, vengeance, trouble.',
     reverseDescription: 'Riot, quarrel, dispute, litigation, defeat.',
-    image: AssetImage('images/major/the_chariot.png'),
+    image: AssetImage('assets/images/major/the_chariot.png'),
   );
 
   static final strength = CardInfo(
@@ -240,7 +240,7 @@ class TarotArcana {
         'Power, energy, action, courage, magnanimity; also complete success and honours.',
     reverseDescription:
         'Despotism, abuse of power, weakness, discord, sometimes even disgrace.',
-    image: AssetImage('images/major/strength.png'),
+    image: AssetImage('assets/images/major/strength.png'),
   );
 
   static final theHermit = CardInfo(
@@ -251,7 +251,7 @@ class TarotArcana {
         'Prudence, circumspection; also and especially treason, dissimulation, roguery, corruption.',
     reverseDescription:
         'Concealment, disguise, policy fear, unreasoned caution.',
-    image: AssetImage('images/major/the_hermit.png'),
+    image: AssetImage('assets/images/major/the_hermit.png'),
   );
 
   static final wheelOfFortune = CardInfo(
@@ -260,7 +260,7 @@ class TarotArcana {
     number: 10,
     uprightDescription: 'Destiny, fortune, success, elevation, luck, felicity.',
     reverseDescription: 'Increase, abundance, superfluity.',
-    image: AssetImage('images/major/wheel_of_fortune.png'),
+    image: AssetImage('assets/images/major/wheel_of_fortune.png'),
   );
 
   static final justice = CardInfo(
@@ -271,7 +271,7 @@ class TarotArcana {
         'Equity, rightness, probity, executive; triumph of the deserving side in law.',
     reverseDescription:
         'Law in all its departments, legal complications, bigotry, bias, excessive severity.',
-    image: AssetImage('images/major/justice.png'),
+    image: AssetImage('assets/images/major/justice.png'),
   );
 
   static final theHangedMan = CardInfo(
@@ -281,7 +281,7 @@ class TarotArcana {
     uprightDescription:
         'Wisdom, circumspection, discernment, trials, sacrifice, intuition, divination, prophecy.',
     reverseDescription: 'Selfishness, the crowd, body politic.',
-    image: AssetImage('images/major/the_hanged_man.png'),
+    image: AssetImage('assets/images/major/the_hanged_man.png'),
   );
 
   static final death = CardInfo(
@@ -292,7 +292,7 @@ class TarotArcana {
         'End, mortality, destruction, corruption; also, for a man, the loss of a benefactor; for a woman, many contrarieties; for a maid, failure of marriage projects.',
     reverseDescription:
         'Inertia, sleep, lethargy, petrifaction, somnambulism; hope.',
-    image: AssetImage('images/major/death.png'),
+    image: AssetImage('assets/images/major/death.png'),
   );
 
   static final temperance = CardInfo(
@@ -303,7 +303,7 @@ class TarotArcana {
         'Economy, moderation, frugality, management, accommodation.',
     reverseDescription:
         'Things connected with churches, religions, sects, the priesthood, sometimes even the priest who will marry Querent; also disunion, unfortunate combinations, competing interests.',
-    image: AssetImage('images/major/temperance.png'),
+    image: AssetImage('assets/images/major/temperance.png'),
   );
 
   static final theDevil = CardInfo(
@@ -313,7 +313,7 @@ class TarotArcana {
     uprightDescription:
         'Ravage, violence, vehemence, extraordinary efforts, force, fatality; that which is predestined but is not for this reason evil.',
     reverseDescription: 'Evil fatality, weakness, pettiness, blindness.',
-    image: AssetImage('images/major/the_devil.png'),
+    image: AssetImage('assets/images/major/the_devil.png'),
   );
 
   static final theTower = CardInfo(
@@ -324,7 +324,7 @@ class TarotArcana {
         'Misery, distress, indigence, adversity, calamity, disgrace, deception, ruin. It is a card in particular of unforeseen catastrophe.',
     reverseDescription:
         'Negligence, absence, distribution, carelessness, distraction, apathy, nullity, vanity.',
-    image: AssetImage('images/major/the_tower.png'),
+    image: AssetImage('assets/images/major/the_tower.png'),
   );
 
   static final theStar = CardInfo(
@@ -334,7 +334,7 @@ class TarotArcana {
     uprightDescription: 'Hope and bright prospects.',
     reverseDescription:
         'Loss, theft, privation, abandonment; another reading says: arrogance, haughtiness, impotence.',
-    image: AssetImage('images/major/the_star.png'),
+    image: AssetImage('assets/images/major/the_star.png'),
   );
 
   static final theMoon = CardInfo(
@@ -345,7 +345,7 @@ class TarotArcana {
         'Hidden enemies, danger, calumny, darkness, terror, deception, occult forces, error.',
     reverseDescription:
         'Instability, inconstancy, silence, lesser degrees of deception and error.',
-    image: AssetImage('images/major/the_moon.png'),
+    image: AssetImage('assets/images/major/the_moon.png'),
   );
 
   static final theSun = CardInfo(
@@ -355,7 +355,7 @@ class TarotArcana {
     uprightDescription: 'Material happiness, fortunate marriage, contentment.',
     reverseDescription:
         'Material happiness, fortunate marriage, contentment. Reversed: The same in a lesser sense.',
-    image: AssetImage('images/major/the_sun.png'),
+    image: AssetImage('assets/images/major/the_sun.png'),
   );
 
   static final judgement = CardInfo(
@@ -366,7 +366,7 @@ class TarotArcana {
         'The Judgement card appearing in a reading signifies that you are coming close to this significant point in your life where you must start to evaluate yourself.',
     reverseDescription:
         'Poor logic, self-doubt, poor or hasty judgement, stagnation.',
-    image: AssetImage('images/major/judgement.png'),
+    image: AssetImage('assets/images/major/judgement.png'),
   );
 
   static final theWorld = CardInfo(
@@ -376,7 +376,7 @@ class TarotArcana {
     uprightDescription:
         'Assured success, recompense, voyage, route, emigration, flight, change of place.',
     reverseDescription: 'Inertia, fixity, stagnation, permanence.',
-    image: AssetImage('images/major/the_world.png'),
+    image: AssetImage('assets/images/major/the_world.png'),
   );
 
   // Pentacles
@@ -389,7 +389,7 @@ class TarotArcana {
         'A new financial or career opportunity, manifestation, abundance.',
     reverseDescription: 'Lost opportunity, lack of planning and foresight.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -403,7 +403,7 @@ class TarotArcana {
     reverseDescription:
         'The Reversed card indicates imbalances, excess juggling, excess struggle, the advice of the card is to re-dress balance.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -417,7 +417,7 @@ class TarotArcana {
     reverseDescription:
         'Negative attributes (when card is in reverse) include sloppiness resulting in a lower quality outcome; lack of skill; banal ideas; and preoccupation with off task concerns.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -431,7 +431,7 @@ class TarotArcana {
     reverseDescription:
         'In contrast, when the Four of Pentacles is in reverse it warns against the tendency of being a spendthrift.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -445,7 +445,7 @@ class TarotArcana {
     reverseDescription:
         'The Reversed meaning of the card is when hope returns slowly but surely, you can be positive from the troubles you\'ve recently experienced, mostly shows up when you are back into a relationship again that was once broken, a renewal of faith. The advice of the card is to see a glass as half full not half empty, to seek help when you need it and not fear rejection.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -459,7 +459,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, the card represents desire, cupidity, envy, jealousy and illusion.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -473,7 +473,7 @@ class TarotArcana {
     reverseDescription:
         'The reversed meaning of the card means, excess energy and personal resources used that can cause a strain, the feeling of giving too much of your time and resources with little reward or assurance of moving forward. The advice of the card is to re-assess your commitment levels, if for too long you are not receiving the results you desire, it may be best to cut your losses especially when it seems to be a bad investment of your time and money.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -487,7 +487,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed: Voided ambition, vanity, cupidity, exaction, usury. It may also signify the possession of skill, in the sense of the ingenious mind turned to cunning and intrigue.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -501,7 +501,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, the card means excess spending, being co-dependent on your financials or on others, to feel lonely in your personal pursuits, to feel inadequate financially, to have everything money can buy but yet still feeling impoverished emotionally and spiritually. The advice of the card is to look within the root of your existing problems, to look and focus on what will make you feel complete and secure, yet to learn and grow along the way.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -514,7 +514,7 @@ class TarotArcana {
         'It is often associated with family matters, financial matters or a mix of the two.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -527,7 +527,7 @@ class TarotArcana {
         'Often used to represent a young person. Can mean a changing of your line of work and/or taking on more responsibility. But primarily, this is the card for students.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -540,7 +540,7 @@ class TarotArcana {
         'A Knight is generally considered the appropriate card for a teenager or young adult, most often a teenaged boy or young man. Coins are considered the "darkest" of the suits in terms of choosing based on appearance and are meant to represent dark-skinned, dark-haired people. Using this method, a Knight of Coins would be used to represent a young man who is dark of complexion and features.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -554,7 +554,7 @@ class TarotArcana {
     reverseDescription:
         'The reversed Queen of Pentacles can become unattached from reality, leaving her completely self-centered. Some of her traits include being selfish and jealous when others show greater success. For the card drawer, the Queen of Pentacles indicates misplaced priorities and distractions from long-term goals. This card also indicates that those in the beholders care are ready to be independent and responsible for their own lives. The beholder has reached a rewarding point where their loved ones are strong enough to make their own decisions. In order to return to her Upright state, the Queen of Pentacles needs to become grounded again.',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -567,7 +567,7 @@ class TarotArcana {
         'The King of Coins depicts a mature man of considerable earthly power, usually depicted as a diplomatic business-man with a lot of practical wisdom. The king of pentacles can be miserly at times. He has a taste for sensual delights and earthly gifts. Here is a man who has a social standing and is big on keeping up with the Joneses.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/pentacles.png',
+      'assets/images/minor/pentacles.png',
     ),
   );
 
@@ -581,7 +581,7 @@ class TarotArcana {
         'This Ace requires the diviner to examine their life to see how creating love works there. This card often means that love is the essence of the situation, the heart of the matter. It may or may not be romantic love, and can depend on other cards around it.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -595,7 +595,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, this card indicates that pairing off to the exclusion of all other people and situations is happening. Take the time to bring balance into life by including other factors. Unhealthy relationships that consume all one\'s energy need to be examined, and a new course of action decided upon.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -609,7 +609,7 @@ class TarotArcana {
     reverseDescription:
         'Negative attributes (when card is in reverse) include sloppiness resulting in a lower quality outcome; lack of skill; banal ideas; and preoccupation with off task concerns.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -623,7 +623,7 @@ class TarotArcana {
     reverseDescription:
         'In contrast, when the Four of Cups is in reverse it warns against the tendency of being a spendthrift.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -637,7 +637,7 @@ class TarotArcana {
     reverseDescription:
         'The Reversed meaning of the card is when hope returns slowly but surely, you can be positive from the troubles you\'ve recently experienced, mostly shows up when you are back into a relationship again that was once broken, a renewal of faith. The advice of the card is to see a glass as half full not half empty, to seek help when you need it and not fear rejection.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -651,7 +651,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, the card represents desire, cupidity, envy, jealousy and illusion.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -665,7 +665,7 @@ class TarotArcana {
     reverseDescription:
         'The reversed meaning of the card means, excess energy and personal resources used that can cause a strain, the feeling of giving too much of your time and resources with little reward or assurance of moving forward. The advice of the card is to re-assess your commitment levels, if for too long you are not receiving the results you desire, it may be best to cut your losses especially when it seems to be a bad investment of your time and money.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -679,7 +679,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed: Voided ambition, vanity, cupidity, exaction, usury. It may also signify the possession of skill, in the sense of the ingenious mind turned to cunning and intrigue.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -693,7 +693,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, the card means excess spending, being co-dependent on your financials or on others, to feel lonely in your personal pursuits, to feel inadequate financially, to have everything money can buy but yet still feeling impoverished emotionally and spiritually. The advice of the card is to look within the root of your existing problems, to look and focus on what will make you feel complete and secure, yet to learn and grow along the way.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -706,7 +706,7 @@ class TarotArcana {
         'It is often associated with family matters, financial matters or a mix of the two.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -719,7 +719,7 @@ class TarotArcana {
         'Often used to represent a young person. Can mean a changing of your line of work and/or taking on more responsibility. But primarily, this is the card for students.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -732,7 +732,7 @@ class TarotArcana {
         'A Knight is generally considered the appropriate card for a teenager or young adult, most often a teenaged boy or young man. Coins are considered the "darkest" of the suits in terms of choosing based on appearance and are meant to represent dark-skinned, dark-haired people. Using this method, a Knight of Coins would be used to represent a young man who is dark of complexion and features.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -746,7 +746,7 @@ class TarotArcana {
     reverseDescription:
         'The reversed Queen of Cups can become unattached from reality, leaving her completely self-centered. Some of her traits include being selfish and jealous when others show greater success. For the card drawer, the Queen of Cups indicates misplaced priorities and distractions from long-term goals. This card also indicates that those in the beholders care are ready to be independent and responsible for their own lives. The beholder has reached a rewarding point where their loved ones are strong enough to make their own decisions. In order to return to her Upright state, the Queen of Cups needs to become grounded again.',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -759,7 +759,7 @@ class TarotArcana {
         'The King of Coins depicts a mature man of considerable earthly power, usually depicted as a diplomatic business-man with a lot of practical wisdom. The king of pentacles can be miserly at times. He has a taste for sensual delights and earthly gifts. Here is a man who has a social standing and is big on keeping up with the Joneses.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/cups.png',
+      'assets/images/minor/cups.png',
     ),
   );
 
@@ -773,7 +773,7 @@ class TarotArcana {
         'A new financial or career opportunity, manifestation, abundance.',
     reverseDescription: 'Lost opportunity, lack of planning and foresight.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -787,7 +787,7 @@ class TarotArcana {
     reverseDescription:
         'The Reversed card indicates imbalances, excess juggling, excess struggle, the advice of the card is to re-dress balance.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -801,7 +801,7 @@ class TarotArcana {
     reverseDescription:
         'Negative attributes (when card is in reverse) include sloppiness resulting in a lower quality outcome; lack of skill; banal ideas; and preoccupation with off task concerns.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -815,7 +815,7 @@ class TarotArcana {
     reverseDescription:
         'In contrast, when the Four of Wands is in reverse it warns against the tendency of being a spendthrift.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -829,7 +829,7 @@ class TarotArcana {
     reverseDescription:
         'The Reversed meaning of the card is when hope returns slowly but surely, you can be positive from the troubles you\'ve recently experienced, mostly shows up when you are back into a relationship again that was once broken, a renewal of faith. The advice of the card is to see a glass as half full not half empty, to seek help when you need it and not fear rejection.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -843,7 +843,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, the card represents desire, cupidity, envy, jealousy and illusion.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -857,7 +857,7 @@ class TarotArcana {
     reverseDescription:
         'The reversed meaning of the card means, excess energy and personal resources used that can cause a strain, the feeling of giving too much of your time and resources with little reward or assurance of moving forward. The advice of the card is to re-assess your commitment levels, if for too long you are not receiving the results you desire, it may be best to cut your losses especially when it seems to be a bad investment of your time and money.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -871,7 +871,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed: Voided ambition, vanity, cupidity, exaction, usury. It may also signify the possession of skill, in the sense of the ingenious mind turned to cunning and intrigue.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -885,7 +885,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, the card means excess spending, being co-dependent on your financials or on others, to feel lonely in your personal pursuits, to feel inadequate financially, to have everything money can buy but yet still feeling impoverished emotionally and spiritually. The advice of the card is to look within the root of your existing problems, to look and focus on what will make you feel complete and secure, yet to learn and grow along the way.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -898,7 +898,7 @@ class TarotArcana {
         'It is often associated with family matters, financial matters or a mix of the two.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -911,7 +911,7 @@ class TarotArcana {
         'Often used to represent a young person. Can mean a changing of your line of work and/or taking on more responsibility. But primarily, this is the card for students.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -924,7 +924,7 @@ class TarotArcana {
         'A Knight is generally considered the appropriate card for a teenager or young adult, most often a teenaged boy or young man. Coins are considered the "darkest" of the suits in terms of choosing based on appearance and are meant to represent dark-skinned, dark-haired people. Using this method, a Knight of Coins would be used to represent a young man who is dark of complexion and features.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -938,7 +938,7 @@ class TarotArcana {
     reverseDescription:
         'The reversed Queen of Wands can become unattached from reality, leaving her completely self-centered. Some of her traits include being selfish and jealous when others show greater success. For the card drawer, the Queen of Wands indicates misplaced priorities and distractions from long-term goals. This card also indicates that those in the beholders care are ready to be independent and responsible for their own lives. The beholder has reached a rewarding point where their loved ones are strong enough to make their own decisions. In order to return to her Upright state, the Queen of Wands needs to become grounded again.',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -951,7 +951,7 @@ class TarotArcana {
         'The King of Coins depicts a mature man of considerable earthly power, usually depicted as a diplomatic business-man with a lot of practical wisdom. The king of pentacles can be miserly at times. He has a taste for sensual delights and earthly gifts. Here is a man who has a social standing and is big on keeping up with the Joneses.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/wands.png',
+      'assets/images/minor/wands.png',
     ),
   );
 
@@ -965,7 +965,7 @@ class TarotArcana {
         'A new financial or career opportunity, manifestation, abundance.',
     reverseDescription: 'Lost opportunity, lack of planning and foresight.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -979,7 +979,7 @@ class TarotArcana {
     reverseDescription:
         'The Reversed card indicates imbalances, excess juggling, excess struggle, the advice of the card is to re-dress balance.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -993,7 +993,7 @@ class TarotArcana {
     reverseDescription:
         'Negative attributes (when card is in reverse) include sloppiness resulting in a lower quality outcome; lack of skill; banal ideas; and preoccupation with off task concerns.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1007,7 +1007,7 @@ class TarotArcana {
     reverseDescription:
         'In contrast, when the Four of Swords is in reverse it warns against the tendency of being a spendthrift.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1021,7 +1021,7 @@ class TarotArcana {
     reverseDescription:
         'The Reversed meaning of the card is when hope returns slowly but surely, you can be positive from the troubles you\'ve recently experienced, mostly shows up when you are back into a relationship again that was once broken, a renewal of faith. The advice of the card is to see a glass as half full not half empty, to seek help when you need it and not fear rejection.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1035,7 +1035,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, the card represents desire, cupidity, envy, jealousy and illusion.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1049,7 +1049,7 @@ class TarotArcana {
     reverseDescription:
         'The reversed meaning of the card means, excess energy and personal resources used that can cause a strain, the feeling of giving too much of your time and resources with little reward or assurance of moving forward. The advice of the card is to re-assess your commitment levels, if for too long you are not receiving the results you desire, it may be best to cut your losses especially when it seems to be a bad investment of your time and money.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1063,7 +1063,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed: Voided ambition, vanity, cupidity, exaction, usury. It may also signify the possession of skill, in the sense of the ingenious mind turned to cunning and intrigue.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1077,7 +1077,7 @@ class TarotArcana {
     reverseDescription:
         'Reversed, the card means excess spending, being co-dependent on your financials or on others, to feel lonely in your personal pursuits, to feel inadequate financially, to have everything money can buy but yet still feeling impoverished emotionally and spiritually. The advice of the card is to look within the root of your existing problems, to look and focus on what will make you feel complete and secure, yet to learn and grow along the way.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1090,7 +1090,7 @@ class TarotArcana {
         'It is often associated with family matters, financial matters or a mix of the two.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1103,7 +1103,7 @@ class TarotArcana {
         'Often used to represent a young person. Can mean a changing of your line of work and/or taking on more responsibility. But primarily, this is the card for students.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1116,7 +1116,7 @@ class TarotArcana {
         'A Knight is generally considered the appropriate card for a teenager or young adult, most often a teenaged boy or young man. Coins are considered the "darkest" of the suits in terms of choosing based on appearance and are meant to represent dark-skinned, dark-haired people. Using this method, a Knight of Coins would be used to represent a young man who is dark of complexion and features.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1130,7 +1130,7 @@ class TarotArcana {
     reverseDescription:
         'The reversed Queen of Swords can become unattached from reality, leaving her completely self-centered. Some of her traits include being selfish and jealous when others show greater success. For the card drawer, the Queen of Swords indicates misplaced priorities and distractions from long-term goals. This card also indicates that those in the beholders care are ready to be independent and responsible for their own lives. The beholder has reached a rewarding point where their loved ones are strong enough to make their own decisions. In order to return to her Upright state, the Queen of Swords needs to become grounded again.',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 
@@ -1143,7 +1143,7 @@ class TarotArcana {
         'The King of Coins depicts a mature man of considerable earthly power, usually depicted as a diplomatic business-man with a lot of practical wisdom. The king of pentacles can be miserly at times. He has a taste for sensual delights and earthly gifts. Here is a man who has a social standing and is big on keeping up with the Joneses.',
     reverseDescription: '???',
     image: AssetImage(
-      'images/minor/swords.png',
+      'assets/images/minor/swords.png',
     ),
   );
 }

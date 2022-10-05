@@ -69,7 +69,7 @@ class TarotCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           image: DecorationImage(
-            image: AssetImage('images/back.png'),
+            image: AssetImage('assets/images/back.png'),
             fit: BoxFit.cover,
           ),
         ),

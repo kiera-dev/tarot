@@ -22,3 +22,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/images/major/
+    - assets/images/minor/
