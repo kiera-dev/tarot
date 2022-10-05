@@ -12,9 +12,41 @@ BoxDecoration gradientBackground = BoxDecoration(
   ),
 );
 
-BoxDecoration artDecoBackground = BoxDecoration(
-  image: DecorationImage(
-    image: AssetImage("images/art_deco.png"),
-    fit: BoxFit.cover,
-  ),
-);
+int getTotalCards(List<int> layout) {
+  int totalCards = 0;
+  layout.forEach((row) {
+    totalCards += row;
+  });
+  return totalCards;
+}
+
+Column buildLayout(List<int> layout, List<Widget> cards) {
+  if (getTotalCards(layout) != cards.length) {
+    throw Exception(
+        '${getTotalCards(layout)} cards needed to build layout, but ${cards.length} provided.');
+  }
+
+  List<Widget> layoutRows = [];
+  layout.forEach((row) {
+    Row layoutRow = Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [],
+    );
+    for (var i = 0; i < row; i++) {
+      if (i % 2 != 0) {
+        layoutRow.children.add(SizedBox(width: 25));
+        layoutRow.children.add(cards.removeLast());
+        layoutRow.children.add(SizedBox(width: 25));
+      } else {
+        layoutRow.children.add(cards.removeLast());
+      }
+    }
+    layoutRows.add(layoutRow);
+    layoutRows.add(SizedBox(height: 25));
+  });
+
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.start,
+    children: layoutRows,
+  );
+}

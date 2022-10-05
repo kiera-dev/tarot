@@ -39,6 +39,7 @@ Widget constructCardLayout(CardInfo card) {
             Padding(padding: EdgeInsets.only(left: 10)),
             BorderedText(
               child: Text(
+                // TODO(mjcastner): Get rid of this if the card is major arcana
                 getDisplayNum(card.number),
                 style: TextStyle(fontSize: 25),
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tarot/pages/title.dart';
+import 'package:tarot/pages/choose.dart';
 
 void main() {
   runApp(TarotApp());
@@ -11,7 +11,7 @@ class TarotApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => TitlePage(),
+        '/': (context) => SpreadChoicePage(),
       },
       title: 'Tarot',
       darkTheme: ThemeData.dark(),
