@@ -84,7 +84,7 @@ class SpreadPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: artDecoBackground,
+        decoration: gradientBackground,
         child: ListView.builder(
           padding: EdgeInsets.all(50),
           itemCount: spreads.length,

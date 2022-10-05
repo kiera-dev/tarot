@@ -125,7 +125,7 @@ class _TarotCardState extends State<TarotCard> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         image: DecorationImage(
-          image: AssetImage('images/back.jpeg'),
+          image: AssetImage('images/back.png'),
           fit: BoxFit.cover,
         ),
       ),

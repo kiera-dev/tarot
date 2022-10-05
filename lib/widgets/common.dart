@@ -5,16 +5,16 @@ BoxDecoration gradientBackground = BoxDecoration(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Colors.deepPurple[700],
-      Colors.pink[400],
-      Colors.amber[400],
+      Color(0xFF163a41),
+      Color(0xFF14252b),
+      Color(0xFF020024),
     ],
   ),
 );
 
 BoxDecoration artDecoBackground = BoxDecoration(
   image: DecorationImage(
-    image: AssetImage("images/art_deco.jpg"),
+    image: AssetImage("images/art_deco.png"),
     fit: BoxFit.cover,
   ),
 );

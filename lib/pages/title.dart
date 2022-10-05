@@ -10,7 +10,7 @@ class TitlePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          decoration: artDecoBackground,
+          decoration: gradientBackground,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

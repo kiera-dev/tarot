@@ -43,7 +43,7 @@ class TablePage extends StatelessWidget {
         ),
       ),
       body: Container(
-        decoration: artDecoBackground,
+        decoration: gradientBackground,
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: FittedBox(
