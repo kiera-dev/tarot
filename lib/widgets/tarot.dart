@@ -3,7 +3,8 @@ import 'dart:math';
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:tarot/pages/card_detail.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:tarot/pages/detail.dart';
 import 'package:tarot/widgets/arcana.dart';
 
 Map<String, List<int>> spreads = {
@@ -13,7 +14,7 @@ Map<String, List<int>> spreads = {
   'The Week Ahead': [1, 3, 3],
 };
 
-String getDisplayNum(int cardNum) {
+String getCardNum(int cardNum, Arcana arcana) {
   const displayNames = {
     1: 'A',
     11: 'P',
@@ -21,60 +22,19 @@ String getDisplayNum(int cardNum) {
     13: 'Q',
     14: 'K',
   };
-  if (displayNames[cardNum] != null) {
-    return displayNames[cardNum];
+
+  if (arcana == Arcana.Major) {
+    return '';
   } else {
-    return cardNum.toString();
+    if (displayNames[cardNum] != null) {
+      return displayNames[cardNum];
+    } else {
+      return cardNum.toString();
+    }
   }
 }
 
-Widget constructCardLayout(CardInfo card) {
-  return Container(
-    child: Column(
-      children: [
-        Padding(padding: EdgeInsets.only(top: 10)),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Padding(padding: EdgeInsets.only(left: 10)),
-            BorderedText(
-              child: Text(
-                // TODO(mjcastner): Get rid of this if the card is major arcana
-                getDisplayNum(card.number),
-                style: TextStyle(fontSize: 25),
-              ),
-            ),
-          ],
-        ),
-        Expanded(
-          child: Container(),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            BorderedText(
-              child: Text(
-                card.name,
-              ),
-            ),
-          ],
-        ),
-        Padding(padding: EdgeInsets.only(bottom: 5)),
-      ],
-    ),
-    height: 300,
-    width: 200,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(5),
-      image: DecorationImage(
-        image: card.image,
-        fit: BoxFit.cover,
-      ),
-    ),
-  );
-}
-
-class TarotCard extends StatefulWidget {
+class TarotCard extends StatelessWidget {
   final CardInfo type;
   String name;
   Arcana arcana;
@@ -100,47 +60,62 @@ class TarotCard extends StatefulWidget {
   }
 
   @override
-  _TarotCardState createState() => _TarotCardState();
-}
-
-class _TarotCardState extends State<TarotCard> {
-  Widget buildCardFront(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => CardDetailPage(this.widget)),
-        );
-      },
-      child: Hero(
-        tag: this.widget.name,
-        child: constructCardLayout(this.widget.type),
-      ),
-    );
-  }
-
-  Widget buildCardBack(BuildContext context) {
-    return Container(
-      height: 300,
-      width: 200,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(5),
-        image: DecorationImage(
-          image: AssetImage('images/back.png'),
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-  }
-
-  @override
   Widget build(BuildContext context) {
     Widget tarotCardWidget = FlipCard(
       // Reverse these so card starts flipped
-      front: buildCardBack(context),
-      back: buildCardFront(context),
+      front: Container(
+        height: 300,
+        width: 200,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          image: DecorationImage(
+            image: AssetImage('images/back.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      back: InkWell(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => DetailPage(this)),
+          );
+        },
+        child: Container(
+          padding: EdgeInsets.all(10),
+          height: 300,
+          width: 200,
+          decoration: BoxDecoration(
+            image: DecorationImage(image: this.image),
+          ),
+          child: Column(
+            children: [
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    BorderedText(
+                      child: Text(
+                        getCardNum(this.number, this.arcana),
+                        style: GoogleFonts.robotoMono(fontSize: 24),
+                      ),
+                    ),
+                  ],
+                ),
+                flex: 9,
+              ),
+              Expanded(
+                child: Center(child: BorderedText(child: Text(this.name))),
+                flex: 1,
+              ),
+            ],
+          ),
+        ),
+      ),
     );
-    if (this.widget.reversed) {
+
+    if (this.reversed) {
       return RotationTransition(
         turns: new AlwaysStoppedAnimation(180 / 360),
         child: tarotCardWidget,
