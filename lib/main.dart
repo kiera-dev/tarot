@@ -14,7 +14,7 @@ class TarotApp extends StatelessWidget {
         '/': (context) => SpreadChoicePage(),
       },
       title: 'Tarot',
-      darkTheme: ThemeData.dark(),
+      theme: ThemeData(brightness: Brightness.dark),
     );
   }
 }

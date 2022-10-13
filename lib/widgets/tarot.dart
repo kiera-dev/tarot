@@ -86,7 +86,10 @@ class TarotCard extends StatelessWidget {
           height: 300,
           width: 200,
           decoration: BoxDecoration(
-            image: DecorationImage(image: this.image),
+            image: DecorationImage(
+              image: this.image,
+              fit: BoxFit.cover,
+            ),
           ),
           child: Column(
             children: [
