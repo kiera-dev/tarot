@@ -10,10 +10,20 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget cardImageWidget = Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: this.card.image,
+          fit: BoxFit.contain,
+        ),
+      ),
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          this.card.name,
+          this.card.reversed ? '${this.card.name} (reversed)' : this.card.name,
           style: GoogleFonts.robotoMono(fontSize: 24),
         ),
       ),
@@ -24,12 +34,11 @@ class DetailPage extends StatelessWidget {
           children: [
             Expanded(
               flex: 3,
-              child: Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: this.card.image),
-                ),
-              ),
+              child: this.card.reversed
+                  ? reverseWidget(cardImageWidget)
+                  : cardImageWidget,
             ),
+            SizedBox(height: 40),
             Expanded(
               flex: 1,
               child: SingleChildScrollView(

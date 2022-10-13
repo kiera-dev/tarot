@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tarot/pages/detail.dart';
 import 'package:tarot/widgets/arcana.dart';
+import 'package:tarot/widgets/common.dart';
 
 Map<String, List<int>> spreads = {
   'One Card': [1],
@@ -119,10 +120,7 @@ class TarotCard extends StatelessWidget {
     );
 
     if (this.reversed) {
-      return RotationTransition(
-        turns: new AlwaysStoppedAnimation(180 / 360),
-        child: tarotCardWidget,
-      );
+      return reverseWidget(tarotCardWidget);
     } else {
       return tarotCardWidget;
     }

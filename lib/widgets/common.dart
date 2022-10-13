@@ -50,3 +50,10 @@ Column buildLayout(List<int> layout, List<Widget> cards) {
     children: layoutRows,
   );
 }
+
+Widget reverseWidget(Widget inputWidget) {
+  return RotationTransition(
+    turns: new AlwaysStoppedAnimation(180 / 360),
+    child: inputWidget,
+  );
+}

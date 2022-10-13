@@ -4,7 +4,7 @@ A tarot card application written in Flutter with original art generated
 by [Stable Diffusion](https://en.wikipedia.org/wiki/Stable_Diffusion) and
 [DALL-E 2](https://openai.com/dall-e-2/).
 
-Try out the most recent version [here](https://tarot-6pljpxojiq-uk.a.run.app/).
+Try out the most recent version [here](https://tarot.mjcastner.dev/).
 
 <img src="https://github.com/kiera-dev/tarot/raw/main/assets/images/demo.gif" alt="Demo GIF" width="600" height="400"/>
 
