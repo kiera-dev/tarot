@@ -150,8 +150,10 @@ class TarotArcana {
     name: 'The Fool',
     arcana: Arcana.Major,
     number: 0,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Folly, mania, extravagance, intoxication, delirium, frenzy, bewrayment.',
+    reverseDescription:
+        'Negligence, absence, distribution, carelessness, apathy, nullity, vanity.',
     image: AssetImage('assets/images/major/the_fool.png'),
   );
 
@@ -159,8 +161,9 @@ class TarotArcana {
     name: 'The Magician',
     arcana: Arcana.Major,
     number: 1,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Skill, diplomacy, address, subtlety; sickness, pain, loss, disaster, snares of enemies; self-confidence, will; the Querent, if male.',
+    reverseDescription: 'Physician, Magus, mental disease, disgrace, disquiet.',
     image: AssetImage('assets/images/major/the_magician.png'),
   );
 
@@ -168,8 +171,10 @@ class TarotArcana {
     name: 'The High Priestess',
     arcana: Arcana.Major,
     number: 2,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Secrets, mystery, the future as yet unrevealed; the woman who interests the Querent, if male; the Querent herself, if female; silence, tenacity; mystery, wisdom, science.',
+    reverseDescription:
+        'Passion, moral or physical ardor, conceit, surface knowledge.',
     image: AssetImage('assets/images/major/the_high_priestess.png'),
   );
 
@@ -177,8 +182,10 @@ class TarotArcana {
     name: 'The Empress',
     arcana: Arcana.Major,
     number: 3,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Fruitfulness, action, initiative, length of days; the unknown, clandestine; also difficulty, doubt, ignorance.',
+    reverseDescription:
+        'Light, truth, the unravelling of involved matters, public rejoicings; according to another reading, vacillation.',
     image: AssetImage('assets/images/major/the_empress.png'),
   );
 
@@ -186,8 +193,10 @@ class TarotArcana {
     name: 'The Emperor',
     arcana: Arcana.Major,
     number: 4,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Stability, power, protection, realization; a great person; aid, reason, conviction; also authority and will.',
+    reverseDescription:
+        'Benevolence, compassion, credit; also confusion to enemies, obstruction, immaturity.',
     image: AssetImage('assets/images/major/the_emperor.png'),
   );
 
@@ -195,8 +204,10 @@ class TarotArcana {
     name: 'The Hierophant',
     arcana: Arcana.Major,
     number: 5,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Marriage, alliance, captivity, servitude; by another account, mercy and goodness; inspiration; the man to whom the Querent has recourse.',
+    reverseDescription:
+        'Society, good understanding, concord, over-kindness, weakness.',
     image: AssetImage('assets/images/major/the_hierophant.png'),
   );
 
@@ -204,8 +215,9 @@ class TarotArcana {
     name: 'The Lovers',
     arcana: Arcana.Major,
     number: 6,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription: 'Attraction, love, beauty, trials overcome.',
+    reverseDescription:
+        'Failure, foolish designs. Another account speaks of marriage frustrated and contrarieties of all kinds.',
     image: AssetImage('assets/images/major/the_lovers.png'),
   );
 
@@ -213,8 +225,9 @@ class TarotArcana {
     name: 'The Chariot',
     arcana: Arcana.Major,
     number: 7,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Succor, providence; also war, triumph, presumption, vengeance, trouble.',
+    reverseDescription: 'Riot, quarrel, dispute, litigation, defeat.',
     image: AssetImage('assets/images/major/the_chariot.png'),
   );
 
@@ -222,8 +235,10 @@ class TarotArcana {
     name: 'Strength',
     arcana: Arcana.Major,
     number: 8,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Power, energy, action, courage, magnanimity; also complete success and honors.',
+    reverseDescription:
+        'Despotism, abuse of power, weakness, discord, sometimes even disgrace.',
     image: AssetImage('assets/images/major/strength.png'),
   );
 
@@ -231,8 +246,10 @@ class TarotArcana {
     name: 'The Hermit',
     arcana: Arcana.Major,
     number: 9,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Prudence, circumspection; also and especially treason, dissimulation, roguery, corruption.',
+    reverseDescription:
+        'Concealment, disguise, policy, fear, unreasoned caution.',
     image: AssetImage('assets/images/major/the_hermit.png'),
   );
 
@@ -240,8 +257,8 @@ class TarotArcana {
     name: 'Wheel of Fortune',
     arcana: Arcana.Major,
     number: 10,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription: 'Destiny, fortune, success, elevation, luck, felicity.',
+    reverseDescription: 'Reversed: Increase, abundance, superfluity.',
     image: AssetImage('assets/images/major/wheel_of_fortune.png'),
   );
 
@@ -249,8 +266,10 @@ class TarotArcana {
     name: 'Justice',
     arcana: Arcana.Major,
     number: 11,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Equity, rightness, probity, executive; triumph of the deserving side in law.',
+    reverseDescription:
+        'Law in all its departments, legal complications, bigotry, bias, excessive severity.',
     image: AssetImage('assets/images/major/justice.png'),
   );
 
@@ -258,8 +277,9 @@ class TarotArcana {
     name: 'The Hanged Man',
     arcana: Arcana.Major,
     number: 12,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Wisdom, circumspection, discernment, trials, sacrifice, intuition, divination, prophecy.',
+    reverseDescription: 'Selfishness, the crowd, body politic.',
     image: AssetImage('assets/images/major/the_hanged_man.png'),
   );
 
@@ -267,8 +287,10 @@ class TarotArcana {
     name: 'Death',
     arcana: Arcana.Major,
     number: 13,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'End, mortality, destruction, corruption; also, for a man, the loss of a benefactor; for a woman, many contrarieties; for a maid, failure of marriage projects.',
+    reverseDescription:
+        'Inertia, sleep, lethargy, petrifaction, somnambulism; hope destroyed.',
     image: AssetImage('assets/images/major/death.png'),
   );
 
@@ -276,8 +298,10 @@ class TarotArcana {
     name: 'Temperance',
     arcana: Arcana.Major,
     number: 14,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Economy, moderation, frugality, management, accommodation.',
+    reverseDescription:
+        'Things connected with churches, religions, sects, the priesthood, sometimes even the priest who will marry the Querent; also disunion, unfortunate combinations, competing interests.',
     image: AssetImage('assets/images/major/temperance.png'),
   );
 
@@ -285,8 +309,9 @@ class TarotArcana {
     name: 'The Devil',
     arcana: Arcana.Major,
     number: 15,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Ravage, violence, vehemence, extraordinary efforts, force, fatality; that which is predestined but is not for this reason evil.',
+    reverseDescription: 'Evil fatality, weakness, pettiness, blindness.',
     image: AssetImage('assets/images/major/the_devil.png'),
   );
 
@@ -294,8 +319,10 @@ class TarotArcana {
     name: 'The Tower',
     arcana: Arcana.Major,
     number: 16,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Misery, distress, indigence, adversity, calamity, disgrace, deception, ruin. It is a card in particular of unforeseen catastrophe.',
+    reverseDescription:
+        'According to one account, the same in a lesser degree; also oppression, imprisonment, tyranny.',
     image: AssetImage('assets/images/major/the_tower.png'),
   );
 
@@ -303,8 +330,9 @@ class TarotArcana {
     name: 'The Star',
     arcana: Arcana.Major,
     number: 17,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Loss, theft, privation, abandonment; another reading says—hope and bright prospects.',
+    reverseDescription: 'Arrogance, haughtiness, impotence.',
     image: AssetImage('assets/images/major/the_star.png'),
   );
 
@@ -312,8 +340,10 @@ class TarotArcana {
     name: 'The Moon',
     arcana: Arcana.Major,
     number: 18,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Hidden enemies, danger, calumny, darkness, terror, deception, occult forces, error.',
+    reverseDescription:
+        'Instability, inconstancy, silence, lesser degrees of deception and error.',
     image: AssetImage('assets/images/major/the_moon.png'),
   );
 
@@ -321,8 +351,9 @@ class TarotArcana {
     name: 'The Sun',
     arcana: Arcana.Major,
     number: 19,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription: 'Material happiness, fortunate marriage, contentment.',
+    reverseDescription:
+        'Material happiness, fortunate marriage, contentment in a lesser sense.',
     image: AssetImage('assets/images/major/the_sun.png'),
   );
 
@@ -330,8 +361,10 @@ class TarotArcana {
     name: 'Judgement',
     arcana: Arcana.Major,
     number: 20,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Change of position, renewal, outcome. Another account specifies total loss through lawsuit.',
+    reverseDescription:
+        'Weakness, pusillanimity, simplicity; also deliberation, decision, sentence.',
     image: AssetImage('assets/images/major/judgement.png'),
   );
 
@@ -339,8 +372,9 @@ class TarotArcana {
     name: 'The World',
     arcana: Arcana.Major,
     number: 21,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Assured success, recompense, voyage, route, emigration, flight, change of place.',
+    reverseDescription: 'Inertia, fixity, stagnation, permanence.',
     image: AssetImage('assets/images/major/the_world.png'),
   );
 
