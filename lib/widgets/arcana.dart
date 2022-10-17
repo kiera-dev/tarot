@@ -961,8 +961,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 1,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Triumph, the excessive degree in everything, conquest, triumph of force. It is a card of great force, in love as well as in hatred. The crown may carry a much higher significance than comes usually within the sphere of fortune-telling.',
+    reverseDescription:
+        'The same, but the results are disastrous; another account says—conception—childbirth, augmentation, multiplicity.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -973,8 +975,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 2,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Conformity and the equipoise which it suggests, courage, friendship, concord in a state of arms; another reading gives tenderness, affection, intimacy. The suggestion of harmony and other favorable readings must be considered in a qualified manner, as Swords generally are not symbolical of beneficent forces in human affairs.',
+    reverseDescription: 'Imposture, falsehood, duplicity, disloyalty.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -985,8 +988,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 3,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Removal, absence, delay, division, rupture, dispersion, and all that the design signifies naturally, being too simple and obvious to call for specific enumeration.',
+    reverseDescription:
+        'Mental alienation, error, loss, distraction, disorder, confusion.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -997,8 +1002,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 4,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Vigilance, retreat, solitude, hermit\'s repose, exile, tomb and coffin. It is these last that have suggested the design.',
+    reverseDescription:
+        'Wise administration, circumspection, economy, avarice, precaution, testament.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1009,8 +1016,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 5,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Degradation, destruction, revocation, infamy, dishonor, loss, with the variants and analogues of these.',
+    reverseDescription:
+        'Degradation, destruction, revocation, infamy, dishonor, loss, with the variants and analogues of these; burial and obsequies.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1021,8 +1030,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 6,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Journey by water, route, way, envoy, commissionary, expedient.',
+    reverseDescription:
+        'Declaration, confession, publicity; one account says that it is a proposal of love.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1033,8 +1044,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 7,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Design, attempt, wish, hope, confidence; also quarrelling, a plan that may fail, annoyance. The design is uncertain in its import, because the significations are widely at variance with each other.',
+    reverseDescription: 'Good advice, counsel, instruction, slander, babbling.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1045,8 +1057,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 8,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Bad news, violent chagrin, crisis, censure, power in trammels, conflict, calumny; also sickness.',
+    reverseDescription:
+        'Disquiet, difficulty, opposition, accident, treachery; what is unforeseen; fatality.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1057,8 +1071,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 9,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Death, failure, miscarriage, delay, deception, disappointment, despair.',
+    reverseDescription:
+        'Imprisonment, suspicion, doubt, reasonable fear, shame.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1069,8 +1085,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 10,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Whatsoever is intimated by the design; also pain, affliction, tears, sadness, desolation. It is not especially a card of violent death.',
+    reverseDescription:
+        'Advantage, profit, success, favor, but none of these are permanent; also power and authority.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1081,8 +1099,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 11,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Authority, overseeing, secret service, vigilance, spying, examination, and the qualities thereto belonging.',
+    reverseDescription:
+        'More evil side of these qualities; what is unforeseen, unprepared state; sickness is also intimated.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1093,8 +1113,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 12,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Skill, bravery, capacity, defense, address, enmity, wrath, war, destruction, opposition, resistance, ruin. There is therefore a sense in which the card signifies death, but it carries this meaning only in its proximity to other cards of fatality.',
+    reverseDescription: 'Imprudence, incapacity, extravagance.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1105,8 +1126,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 13,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Widowhood, female sadness and embarrassment, absence, sterility, mourning, privation, separation.',
+    reverseDescription: 'Malice, bigotry, artifice, prudery, bale, deceit.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
@@ -1117,8 +1139,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 14,
     suit: Suits.Swords,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Whatsoever arises out of the idea of judgment and all its connections—power, command, authority, militant intelligence, law, offices of the crown, and so forth.',
+    reverseDescription:
+        'Cruelty, perversity, barbarity, perfidy, evil intention.',
     image: AssetImage(
       'assets/images/minor/swords.png',
     ),
