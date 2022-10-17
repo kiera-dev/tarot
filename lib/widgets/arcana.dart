@@ -575,8 +575,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 1,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'House of the true heart, joy, content, abode, nourishment, abundance, fertility; Holy Table, felicity hereof.',
+    reverseDescription:
+        'House of the false heart, mutation, instability, revolution.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -587,8 +589,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 2,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Love, passion, friendship, affinity, union, concord, sympathy, the inter-relation of the sexes, and—as a suggestion apart from all offices of divination—that desire which is not in Nature, but by which Nature is sanctified.',
+    reverseDescription:
+        'Love, passion, friendship, affinity, union, concord, sympathy, the inter-relation of the sexes, and—as a suggestion apart from all offices of divination—that desire which is not in Nature, but by which Nature is sanctified.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -599,8 +603,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 3,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'The conclusion of any matter in plenty, perfection and merriment; happy issue, victory, fulfilment, solace, healing.',
+    reverseDescription:
+        'Expedition, dispatch, achievement, end. It signifies also the side of excess in physical',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -611,8 +617,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 4,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Weariness, disgust, aversion, imaginary vexations, as if the wine of this world had caused satiety only; another wine, as if a fairy gift, is now offered the wastrel, but he sees no consolation therein. This is also a card of blended pleasure.',
+    reverseDescription: 'Novelty, presage, new instruction, new relations.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -623,8 +630,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 5,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'It is a card of loss, but something remains over; three have been taken, but two are left; it is a card of inheritance, patrimony, transmission, but not corresponding to expectations; with some interpreters it is a card of marriage, but not without bitterness or frustration.',
+    reverseDescription:
+        'News, alliances, affinity, consanguinity, ancestry, return, false projects.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -635,8 +644,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 6,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'A card of the past and of memories, looking back, as—for example—on childhood; happiness, enjoyment, but coming rather from the past; things that have vanished. Another reading reverses this, giving new relations, new knowledge, new environment, and then the children are disporting in an unfamiliar precinct.',
+    reverseDescription:
+        'The future, renewal, that which will come to pass presently.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -647,8 +658,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 7,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Fairy favors, images of reflection, sentiment, imagination, things seen in the glass of contemplation; some attainment in these degrees, but nothing permanent or substantial is suggested.',
+    reverseDescription: 'Desire, will, determination, project.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -659,8 +671,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 8,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'The card speaks for itself on the surface, but other readings are entirely antithetical—giving joy, mildness, timidity, honor, modesty. In practice, it is usually found that the card shows the decline of a matter, or that a matter which has been thought to be important is really of slight consequence—either for good or evil.',
+    reverseDescription: 'Great joy, happiness, feasting.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -671,8 +684,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 9,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Concord, contentment, physical bien-être; also victory, success, advantage; satisfaction for the Querent or person for whom the consultation is made.',
+    reverseDescription:
+        'Truth, loyalty, liberty; but the readings vary and include mistakes, imperfections, etc.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -683,8 +698,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 10,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Contentment, repose of the entire heart; the perfection of that state; also perfection of human love and friendship; if with several picture-cards, a person who is taking charge of the Querent\'s interests; also the town, village or country inhabited by the Querent.',
+    reverseDescription: 'Repose of the false heart, indignation, violence.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -695,8 +711,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 11,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Fair young man, one impelled to render service and with whom the Querent will be connected; a studious youth; news, message; application, reflection, meditation; also these things directed to business.',
+    reverseDescription:
+        'Taste, inclination, attachment, seduction, deception, artifice.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -707,8 +725,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 12,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Arrival, approach—sometimes that of a messenger; advances, proposition, demeanor, invitation, incitement.',
+    reverseDescription:
+        'Trickery, artifice, subtlety, swindling, duplicity, fraud.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -719,8 +739,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 13,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Good, fair woman; honest, devoted woman, who will do service to the Querent; loving intelligence, and hence the gift of vision; success, happiness, pleasure; also wisdom, virtue; a perfect spouse and a good mother.',
+    reverseDescription:
+        'The accounts vary; good woman; otherwise, distinguished woman but one not to be trusted; perverse woman; vice, dishonor, depravity.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
@@ -731,8 +753,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 14,
     suit: Suits.Cups,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Fair man, man of business, law, or divinity; responsible, disposed to oblige the Querent; also equity, art and science, including those who profess science, law and art; creative intelligence.',
+    reverseDescription:
+        'Dishonest, double-dealing man; roguery, exaction, injustice, vice, scandal, pillage, considerable loss.',
     image: AssetImage(
       'assets/images/minor/cups.png',
     ),
