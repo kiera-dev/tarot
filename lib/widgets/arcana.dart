@@ -768,8 +768,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 1,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Creation, invention, enterprise, the powers which result in these; principle, beginning, source; birth, family, origin, and in a sense the virility which is behind them; the starting point of enterprises; according to another account, money, fortune, inheritance.',
+    reverseDescription:
+        'Fall, decadence, ruin, perdition, to perish; also a certain clouded joy.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -780,8 +782,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 2,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Between the alternative readings there is no marriage possible; on the one hand, riches, fortune, magnificence; on the other, physical suffering, disease, chagrin, sadness, mortification. The design gives one suggestion; here is a lord overlooking his dominion and alternately contemplating a globe; it looks like the malady, the mortification, the sadness of Alexander amidst the grandeur of this world\'s wealth.',
+    reverseDescription:
+        'Surprise, wonder, enchantment, emotion, trouble, fear.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -792,8 +796,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 3,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'He symbolizes established strength, enterprise, effort, trade, commerce, discovery; those are his ships, bearing his merchandise, which are sailing over the sea. The card also signifies able co-operation in business, as if the successful merchant prince were looking from his side towards yours with a view to help you.',
+    reverseDescription:
+        'The end of troubles, suspension or cessation of adversity, toil and disappointment.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -804,8 +810,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 4,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'They are for once almost on the surface—country life, haven of refuge, a species of domestic harvest-home, repose, concord, harmony, prosperity, peace, and the perfected work of these.',
+    reverseDescription:
+        'The meaning remains unaltered; it is prosperity, increase, felicity, beauty, embellishment.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -816,8 +824,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 5,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Imitation, as, for example, sham fight, but also the strenuous competition and struggle of the search after riches and fortune. In this sense it connects with the battle of life. Hence some attributions say that it is a card of gold, gain, opulence.',
+    reverseDescription: 'Litigation, disputes, trickery, contradiction.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -828,8 +837,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 6,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'The card has been so designed that it can cover several significations; on the surface, it is a victor triumphing, but it is also great news, such as might be carried in state by the King\'s courier; it is expectation crowned with its own desire, the crown of hope, and so forth.',
+    reverseDescription:
+        'Apprehension, fear, as of a victorious enemy at the gate; treachery, disloyalty, as of gates being opened to the enemy; also indefinite delay.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -840,8 +851,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 7,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'It is a card of valor, for, on the surface, six are attacking one, who has, however, the vantage position. On the intellectual plane, it signifies discussion, wordy strife; in business—negotiations, war of trade, barter, competition. It is further a card of success, for the combatant is on the top and his enemies may be unable to reach him.',
+    reverseDescription:
+        'Perplexity, embarrassments, anxiety. It is also a caution against indecision.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -852,8 +865,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 8,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Activity in undertakings, the path of such activity, swiftness, as that of an express messenger; great haste, great hope, speed towards an end which promises assured felicity; generally, that which is on the move; also the arrows of love.',
+    reverseDescription:
+        'Arrows of jealousy, internal dispute, stingings of conscience, quarrels; and domestic disputes for persons who are married.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -864,8 +879,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 9,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'The card signifies strength in opposition. If attacked, the person will meet an onslaught boldly; and his build shows that he may prove a formidable antagonist. With this main significance there are all its possible adjuncts—delay, suspension, adjournment.',
+    reverseDescription: 'Obstacles, adversity, calamity.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -876,8 +892,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 10,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'A card of many significances, and some of the readings cannot be harmonized. I set aside that which connects it with honor and good faith. The chief meaning is oppression simply, but it is also fortune, gain, any kind of success, and then it is the oppression of these things. It is also a card of false-seeming, disguise, perfidy. The place which the figure is approaching may suffer from the rods that he carries. Success is stultified if the Nine of Swords follows, and if it is a question of a lawsuit, there will be certain loss.',
+    reverseDescription:
+        'Contrarieties, difficulties, intrigues, and their analogies.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -888,8 +906,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 11,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Dark young man, faithful, a lover, an envoy, a postman. Beside a man, he will bear favorable testimony concerning him. A dangerous rival, if followed by the Page of Cups. Has the chief qualities of his suit. He may signify family intelligence.',
+    reverseDescription:
+        'Anecdotes, announcements, evil news. Also indecision and the instability which accompanies it.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -900,8 +920,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 12,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Departure, absence, flight, emigration. A dark young man, friendly. Change of residence.',
+    reverseDescription: 'Rupture, division, interruption, discord.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -912,8 +933,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 13,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'A dark woman, country-woman, friendly, chaste, loving, honorable. If the card beside her signifies a man, she is well disposed towards him; if a woman, she is interested in the Querent. Also, love of money, or a certain success in business.',
+    reverseDescription:
+        'Good, economical, obliging, serviceable. Signifies also—but in certain positions and in the neighborhood of other cards tending in such directions—opposition, jealousy, even deceit and infidelity.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
@@ -924,8 +947,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 14,
     suit: Suits.Wands,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Dark man, friendly, countryman, generally married, honest and conscientious. The card always signifies honesty, and may mean news concerning an unexpected heritage to fall in before very long.',
+    reverseDescription: 'Good, but severe; austere, yet tolerant.',
     image: AssetImage(
       'assets/images/minor/wands.png',
     ),
