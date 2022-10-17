@@ -384,8 +384,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 1,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Perfect contentment, felicity, ecstasy; also speedy intelligence; gold.',
+    reverseDescription:
+        'The evil side of wealth, bad intelligence; also great riches.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -396,8 +398,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 2,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'News and messages in writing, as obstacles, agitation, trouble, embroilment.',
+    reverseDescription:
+        'Enforced gaiety, simulated enjoyment, literal sense, handwriting, composition, letters of exchange.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -408,8 +412,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 3,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Trade, skilled labor; usually, however, regarded as a card of nobility, aristocracy, renown, glory.',
+    reverseDescription:
+        'Mediocrity, in work and otherwise, puerility, pettiness, weakness.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -420,8 +426,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 4,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'The surety of possessions, cleaving to that which one has, gift, legacy, inheritance.',
+    reverseDescription: 'Suspense, delay, opposition.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -432,8 +439,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 5,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'The card foretells material trouble above all, whether in the form illustrated—that is, destitution—or otherwise. For some cartomancists, it is a card of love and lovers—wife, husband, friend, mistress; also concordance, affinities. These alternatives cannot be harmonized.',
+    reverseDescription: 'Disorder, chaos, ruin, discord, profligacy.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -444,8 +452,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 6,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Presents, gifts, gratification; another account says attention, vigilance; now is the accepted time, present prosperity, etc.',
+    reverseDescription: 'Desire, cupidity, envy, jealousy, illusion.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -456,8 +465,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 7,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'These are exceedingly contradictory; in the main, it is a card of money, business, barter; but one reading gives altercation, quarrel—and another innocence, ingenuity, purgation.',
+    reverseDescription:
+        'Cause for anxiety regarding money which it may be proposed to lend.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -468,8 +479,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 8,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Work, employment, commission, craftsmanship, skill in craft and business, perhaps in the preparatory stage.',
+    reverseDescription:
+        'Voided ambition, vanity, cupidity, exaction, usury. It may also signify the possession of skill, in the sense of the ingenious mind turned to cunning and intrigue.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -480,8 +493,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 9,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Prudence, safety, success, accomplishment, certitude, discernment.',
+    reverseDescription: 'Roguery, deception, voided project, bad faith.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -492,8 +506,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 10,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Gain, riches; family matters, archives, extraction, the abode of a family.',
+    reverseDescription:
+        'Chance, fatality, loss, robbery, games of hazard; sometimes gift, dowry, pension.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -504,8 +520,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 11,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Application, study, scholarship, reflection; another reading says news, messages and the bringer thereof; also rule, management.',
+    reverseDescription:
+        'Prodigality, dissipation, liberality, luxury, unfavorable news.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -516,8 +534,10 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 12,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Utility, serviceableness, interest, responsibility, rectitude—all on the normal and external plane.',
+    reverseDescription:
+        'Inertia, idleness, repose of that kind, stagnation; also placidity, discouragement, carelessness.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -528,8 +548,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 13,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Opulence, generosity, magnificence, security, liberty.',
+    reverseDescription: 'Evil, suspicion, suspense, fear, mistrust.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
@@ -540,8 +561,9 @@ class TarotArcana {
     arcana: Arcana.Minor,
     number: 14,
     suit: Suits.Pentacles,
-    uprightDescription: '',
-    reverseDescription: '',
+    uprightDescription:
+        'Valor, intelligence, business, mathematical gifts, and success in these paths.',
+    reverseDescription: 'Vice, weakness, perversity, peril.',
     image: AssetImage(
       'assets/images/minor/pentacles.png',
     ),
