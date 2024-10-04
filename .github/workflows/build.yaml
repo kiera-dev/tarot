@@ -25,6 +25,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          flutter-version: 2.10.5
       - name: Build Flutter web app
         run: flutter build web --pwa-strategy=none
       - name: Build Docker image
